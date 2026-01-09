@@ -112,14 +112,6 @@ A comprehensive CSS course covering everything from fundamentals to advanced lay
 79. [CSS Modules](./14-preprocessors/04-css-modules/)
 80. [Tailwind CSS Concepts](./14-preprocessors/05-tailwind-concepts/)
 
-### 📚 Module 15: Advanced Topics & Future CSS
-81. [CSS Houdini](./15-advanced-topics/01-houdini/)
-82. [CSS Paint API](./15-advanced-topics/02-paint-api/)
-83. [CSS Layout API](./15-advanced-topics/03-layout-api/)
-84. [CSS Properties and Values API](./15-advanced-topics/04-properties-values-api/)
-85. [CSS Anchor Positioning](./15-advanced-topics/05-anchor-positioning/)
-86. [CSS @scope Rule](./15-advanced-topics/06-scope-rule/)
-87. [Future CSS Features](./15-advanced-topics/07-future-features/)
 
 
 ## How to Use This Course
@@ -169,8 +161,6 @@ Module 12: CSS for Accessibility (Topics 63-68)
 Module 13: CSS Effects & Visual Design (Topics 69-75)
     ↓
 Module 14: CSS Preprocessors & Tools (Topics 76-80)
-    ↓
-Module 15: Advanced Topics & Future CSS (Topics 81-87)
 ```
 
 ## Recommended Learning Approach
