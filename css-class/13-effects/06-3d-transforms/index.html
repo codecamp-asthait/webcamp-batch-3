@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transforms - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>3D Transforms</h1>
+        <p class="subtitle">Master three-dimensional transformations with CSS</p>
+
+        <section>
+            <h2>Basic 3D Rotations</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>rotateX()</h3>
+                    <div class="scene">
+                        <div class="rotate-x-box">rotateX</div>
+                    </div>
+                    <p class="code">transform: rotateX(35deg);</p>
+                </div>
+                <div class="demo-item">
+                    <h3>rotateY()</h3>
+                    <div class="scene">
+                        <div class="rotate-y-box">rotateY</div>
+                    </div>
+                    <p class="code">transform: rotateY(35deg);</p>
+                </div>
+                <div class="demo-item">
+                    <h3>rotateZ()</h3>
+                    <div class="scene">
+                        <div class="rotate-z-box">rotateZ</div>
+                    </div>
+                    <p class="code">transform: rotateZ(45deg);</p>
+                </div>
+                <div class="demo-item">
+                    <h3>rotate3d()</h3>
+                    <div class="scene">
+                        <div class="rotate-3d-box">rotate3d</div>
+                    </div>
+                    <p class="code">transform: rotate3d(1,1,0,45deg);</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3D Card Flip Effects</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Horizontal Flip</h3>
+                    <div class="flip-container horizontal">
+                        <div class="flip-card">
+                            <div class="flip-front">Front</div>
+                            <div class="flip-back">Back</div>
+                        </div>
+                    </div>
+                    <p class="code">Hover to flip</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Vertical Flip</h3>
+                    <div class="flip-container vertical">
+                        <div class="flip-card-vertical">
+                            <div class="flip-front">Top</div>
+                            <div class="flip-back">Bottom</div>
+                        </div>
+                    </div>
+                    <p class="code">Hover to flip</p>
+                </div>
+                <div class="demo-item">
+                    <h3>3D Card Tilt</h3>
+                    <div class="tilt-container">
+                        <div class="tilt-card">
+                            <div class="tilt-content">Tilt Card</div>
+                        </div>
+                    </div>
+                    <p class="code">Hover to tilt</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Perspective Shift</h3>
+                    <div class="perspective-container">
+                        <div class="perspective-box">Perspective</div>
+                    </div>
+                    <p class="code">Hover for effect</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3D Cube</h2>
+            <div class="cube-section">
+                <p>Interactive rotating cube - demonstrates all six faces in 3D space</p>
+                <div class="cube-container">
+                    <div class="cube">
+                        <div class="cube-face front">Front</div>
+                        <div class="cube-face back">Back</div>
+                        <div class="cube-face right">Right</div>
+                        <div class="cube-face left">Left</div>
+                        <div class="cube-face top">Top</div>
+                        <div class="cube-face bottom">Bottom</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>TranslateZ Effects</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Floating Forward</h3>
+                    <div class="scene">
+                        <div class="translate-z-box">Float</div>
+                    </div>
+                    <p class="code">transform: translateZ(50px);</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Layered Depth</h3>
+                    <div class="scene layered">
+                        <div class="layer layer-1">Layer 1</div>
+                        <div class="layer layer-2">Layer 2</div>
+                        <div class="layer layer-3">Layer 3</div>
+                    </div>
+                    <p class="code">Multiple translateZ values</p>
+                </div>
+                <div class="demo-item">
+                    <h3>3D Stack</h3>
+                    <div class="scene">
+                        <div class="stack-item stack-1">1</div>
+                        <div class="stack-item stack-2">2</div>
+                        <div class="stack-item stack-3">3</div>
+                    </div>
+                    <p class="code">transform: translateZ + rotateY</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Depth Scaling</h3>
+                    <div class="scene">
+                        <div class="depth-scale depth-1">S</div>
+                        <div class="depth-scale depth-2">M</div>
+                        <div class="depth-scale depth-3">L</div>
+                    </div>
+                    <p class="code">Scale with Z-depth</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Combined Transform Effects</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Spin & Float</h3>
+                    <div class="scene">
+                        <div class="spin-float">Spin</div>
+                    </div>
+                    <p class="code">rotateY + translateZ</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Rotate & Tilt</h3>
+                    <div class="scene">
+                        <div class="rotate-tilt">Tilt</div>
+                    </div>
+                    <p class="code">rotateX + rotateZ</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Complex Animation</h3>
+                    <div class="scene">
+                        <div class="complex-anim">Mix</div>
+                    </div>
+                    <p class="code">Multiple transforms</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Orbit Effect</h3>
+                    <div class="scene orbit-scene">
+                        <div class="orbit">
+                            <div class="orbit-item">O</div>
+                        </div>
+                    </div>
+                    <p class="code">Orbital motion</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Transform Origin Effects</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Center Origin</h3>
+                    <div class="scene">
+                        <div class="origin-center">Center</div>
+                    </div>
+                    <p class="code">origin: center</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Top-Left Origin</h3>
+                    <div class="scene">
+                        <div class="origin-topleft">TopLeft</div>
+                    </div>
+                    <p class="code">origin: top left</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Bottom-Right Origin</h3>
+                    <div class="scene">
+                        <div class="origin-bottomright">BtmRght</div>
+                    </div>
+                    <p class="code">origin: bottom right</p>
+                </div>
+                <div class="demo-item">
+                    <h3>Custom Origin</h3>
+                    <div class="scene">
+                        <div class="origin-custom">Custom</div>
+                    </div>
+                    <p class="code">origin: 75% 25%</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Best Practices</h2>
+            <ul class="practices-list">
+                <li>Use <code>perspective</code> property with 3D rotations for realistic depth</li>
+                <li>Set <code>transform-style: preserve-3d</code> on parent containers</li>
+                <li>Use <code>backface-visibility: hidden</code> to hide back faces of elements</li>
+                <li>Combine transforms with <code>transition</code> for smooth animations</li>
+                <li>Remember: transform order matters - transforms are applied left to right</li>
+                <li>Use <code>will-change: transform</code> to optimize animated 3D elements</li>
+                <li>Test 3D effects on devices - performance varies</li>
+                <li>Consider <code>prefers-reduced-motion</code> for accessibility</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Code Examples</h2>
+            <div class="code-example">
+                <h3>Basic 3D Card Flip</h3>
+                <pre>.flip-card {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}</pre>
+            </div>
+
+            <div class="code-example">
+                <h3>3D Cube Structure</h3>
+                <pre>.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate-cube 10s infinite linear;
+}
+
+.cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate-cube {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}</pre>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostCSS - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PostCSS</h1>
+        
+        <section class="section">
+            <h2>What is PostCSS?</h2>
+            <p>PostCSS is a JavaScript tool that transforms CSS using plugins. It parses CSS, applies transformations through a modular plugin system, and outputs the modified CSS.</p>
+            <p>Unlike preprocessors like Sass, PostCSS works with standard CSS and uses plugins for transformations.</p>
+        </section>
+
+        <section class="section">
+            <h2>How PostCSS Works</h2>
+            <div class="process-flow">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Parse</h3>
+                    <p>Input CSS is parsed into an AST (Abstract Syntax Tree)</p>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Transform</h3>
+                    <p>Plugins analyze and modify the AST</p>
+                </div>
+                <div class="arrow"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Output</h3>
+                    <p>Modified CSS is generated from the AST</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Popular Plugins</h2>
+            <div class="plugins-grid">
+                <div class="plugin-card">
+                    <h3>Autoprefixer</h3>
+                    <p>Automatically adds vendor prefixes for cross-browser compatibility</p>
+                    <code>require('autoprefixer')</code>
+                </div>
+                <div class="plugin-card">
+                    <h3>CSSnano</h3>
+                    <p>Minifies and optimizes CSS for production</p>
+                    <code>require('cssnano')</code>
+                </div>
+                <div class="plugin-card">
+                    <h3>PostCSS Preset Env</h3>
+                    <p>Converts modern CSS to compatible code</p>
+                    <code>require('postcss-preset-env')</code>
+                </div>
+                <div class="plugin-card">
+                    <h3>PostCSS Import</h3>
+                    <p>Inlines @import rules for bundling</p>
+                    <code>require('postcss-import')</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Autoprefixer Example</h2>
+            <div class="code-comparison">
+                <div class="code-section">
+                    <h3>Before (Source CSS)</h3>
+                    <pre>.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}</pre>
+                </div>
+                <div class="code-section">
+                    <h3>After (Autoprefixed)</h3>
+                    <pre>.grid {
+    display: -ms-grid;
+    display: grid;
+    gap: 20px;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Configuration Example</h2>
+            <div class="config-example">
+                <h3>postcss.config.js</h3>
+                <pre>module.exports = {
+    plugins: [
+        require('postcss-import'),
+        require('postcss-preset-env')({
+            stage: 3
+        }),
+        require('autoprefixer'),
+        require('cssnano')({
+            preset: ['default', {
+                discardComments: {
+                    removeAll: true
+                }
+            }]
+        })
+    ]
+}</pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Installation & Setup</h2>
+            <div class="setup-steps">
+                <div class="step-item">
+                    <h3>1. Install PostCSS</h3>
+                    <code>npm install -D postcss postcss-cli</code>
+                </div>
+                <div class="step-item">
+                    <h3>2. Install Plugins</h3>
+                    <code>npm install -D autoprefixer cssnano</code>
+                </div>
+                <div class="step-item">
+                    <h3>3. Create Configuration</h3>
+                    <code>touch postcss.config.js</code>
+                </div>
+                <div class="step-item">
+                    <h3>4. Process CSS</h3>
+                    <code>postcss input.css -o output.css</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>PostCSS vs Preprocessors</h2>
+            <div class="comparison-grid">
+                <div class="comparison-box">
+                    <h3>PostCSS</h3>
+                    <ul>
+                        <li>Standard CSS syntax</li>
+                        <li>Plugin-based</li>
+                        <li>Modular approach</li>
+                        <li>Transformations</li>
+                        <li>No compilation step</li>
+                    </ul>
+                </div>
+                <div class="comparison-box">
+                    <h3>Preprocessors (Sass/Less)</h3>
+                    <ul>
+                        <li>Custom syntax</li>
+                        <li>All-in-one</li>
+                        <li>Monolithic</li>
+                        <li>Features built-in</li>
+                        <li>Requires compilation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

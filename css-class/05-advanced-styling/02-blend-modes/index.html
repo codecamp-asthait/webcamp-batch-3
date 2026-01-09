@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blend Modes - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Blend Modes</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS blend modes allow you to control how an element's content blends with its background or with elements behind it. They're similar to blend modes in image editing software like Photoshop, enabling creative visual effects.</p>
+        </section>
+
+        <section class="section">
+            <h2>mix-blend-mode Property</h2>
+            <p>The <code>mix-blend-mode</code> property controls how an element blends with its background.</p>
+            
+            <div class="blend-grid">
+                <div class="blend-item">
+                    <div class="blend-demo normal">
+                        <div class="overlay-text">normal</div>
+                    </div>
+                    <p>normal</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo multiply">
+                        <div class="overlay-text">multiply</div>
+                    </div>
+                    <p>multiply</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo screen">
+                        <div class="overlay-text">screen</div>
+                    </div>
+                    <p>screen</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo overlay">
+                        <div class="overlay-text">overlay</div>
+                    </div>
+                    <p>overlay</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo darken">
+                        <div class="overlay-text">darken</div>
+                    </div>
+                    <p>darken</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo lighten">
+                        <div class="overlay-text">lighten</div>
+                    </div>
+                    <p>lighten</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo color-dodge">
+                        <div class="overlay-text">color-dodge</div>
+                    </div>
+                    <p>color-dodge</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo color-burn">
+                        <div class="overlay-text">color-burn</div>
+                    </div>
+                    <p>color-burn</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo hard-light">
+                        <div class="overlay-text">hard-light</div>
+                    </div>
+                    <p>hard-light</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo soft-light">
+                        <div class="overlay-text">soft-light</div>
+                    </div>
+                    <p>soft-light</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo difference">
+                        <div class="overlay-text">difference</div>
+                    </div>
+                    <p>difference</p>
+                </div>
+                <div class="blend-item">
+                    <div class="blend-demo exclusion">
+                        <div class="overlay-text">exclusion</div>
+                    </div>
+                    <p>exclusion</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>background-blend-mode Property</h2>
+            <p>The <code>background-blend-mode</code> property controls how background images and colors blend together.</p>
+            
+            <div class="bg-blend-grid">
+                <div class="bg-blend-demo bg-multiply">
+                    <p>multiply</p>
+                </div>
+                <div class="bg-blend-demo bg-screen">
+                    <p>screen</p>
+                </div>
+                <div class="bg-blend-demo bg-overlay">
+                    <p>overlay</p>
+                </div>
+                <div class="bg-blend-demo bg-darken">
+                    <p>darken</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Text with Blend Modes</h2>
+            <p>Blend modes can create interesting text effects when text overlaps colorful backgrounds.</p>
+            
+            <div class="text-blend-container">
+                <h3 class="text-blend multiply-text">Blended Text Effect</h3>
+                <h3 class="text-blend screen-text">Blended Text Effect</h3>
+                <h3 class="text-blend difference-text">Blended Text Effect</h3>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Image Overlays with Blend Modes</h2>
+            <p>Create photo overlays and color effects using blend modes.</p>
+            
+            <div class="image-overlay-grid">
+                <div class="image-overlay overlay-multiply">
+                    <div class="overlay-content">Multiply Overlay</div>
+                </div>
+                <div class="image-overlay overlay-screen">
+                    <div class="overlay-content">Screen Overlay</div>
+                </div>
+                <div class="image-overlay overlay-overlay">
+                    <div class="overlay-content">Overlay Mode</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Interactive Blend Mode Selector</h2>
+            <div class="interactive-demo">
+                <div class="controls">
+                    <label>
+                        Select Blend Mode:
+                        <select id="blendSelect" onchange="updateBlend()">
+                            <option value="normal">normal</option>
+                            <option value="multiply">multiply</option>
+                            <option value="screen">screen</option>
+                            <option value="overlay">overlay</option>
+                            <option value="darken">darken</option>
+                            <option value="lighten">lighten</option>
+                            <option value="color-dodge">color-dodge</option>
+                            <option value="color-burn">color-burn</option>
+                            <option value="hard-light">hard-light</option>
+                            <option value="soft-light">soft-light</option>
+                            <option value="difference">difference</option>
+                            <option value="exclusion">exclusion</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="preview-area">
+                    <div class="preview-bg">
+                        <div class="preview-overlay" id="previewOverlay">
+                            <h3>Preview</h3>
+                            <p>Change the blend mode to see the effect!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with blend modes! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A text overlay with multiply blend mode</li>
+                    <li>An image with a color overlay using screen</li>
+                    <li>A card design using overlay blend mode</li>
+                    <li>Creative text effects with difference or exclusion</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function updateBlend() {
+            const select = document.getElementById('blendSelect');
+            const overlay = document.getElementById('previewOverlay');
+            overlay.style.mixBlendMode = select.value;
+        }
+    </script>
+</body>
+</html>

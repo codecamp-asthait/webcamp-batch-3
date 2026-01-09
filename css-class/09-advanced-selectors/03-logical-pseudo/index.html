@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:is(), :where(), :not() - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>:is(), :where(), :not()</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Logical pseudo-classes (<code>:is()</code>, <code>:where()</code>, and <code>:not()</code>) provide powerful ways to group selectors and create complex selection logic. They help reduce CSS code duplication and make selectors more maintainable.</p>
+        </section>
+
+        <section class="section">
+            <h2>:is() Selector</h2>
+            <div class="is-demo">
+                <h3 class="is-item">Heading</h3>
+                <p class="is-item">Paragraph</p>
+                <div class="is-item">Div</div>
+                <span class="is-item">Span</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>:where() Selector</h2>
+            <div class="where-demo">
+                <button class="where-item">Button 1</button>
+                <a href="#" class="where-item">Link</a>
+                <input type="button" value="Input Button" class="where-item">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>:not() Selector</h2>
+            <div class="not-demo">
+                <div class="not-item">Item 1</div>
+                <div class="not-item disabled">Item 2 (Disabled)</div>
+                <div class="not-item">Item 3</div>
+                <div class="not-item disabled">Item 4 (Disabled)</div>
+                <div class="not-item">Item 5</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Combining Logical Selectors</h2>
+            <div class="combined-demo">
+                <div class="combined-item">Regular</div>
+                <div class="combined-item active">Active</div>
+                <div class="combined-item disabled">Disabled</div>
+                <div class="combined-item active">Active</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with logical selectors! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Grouped selectors with :is()</li>
+                    <li>Zero-specificity selectors with :where()</li>
+                    <li>Exclusion selectors with :not()</li>
+                    <li>Complex combinations of logical selectors</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

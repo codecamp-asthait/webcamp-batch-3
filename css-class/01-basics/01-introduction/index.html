@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Introduction - Basic CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Introduction</h1>
+        
+        <section class="topic">
+            <h2>What is CSS?</h2>
+            <p>CSS (Cascading Style Sheets) is used to style and layout web pages.</p>
+        </section>
+
+        <section class="topic">
+            <h2>Three Ways to Add CSS</h2>
+            
+            <div class="method">
+                <h3>1. Inline CSS</h3>
+                <p style="color: red; font-size: 18px;">This paragraph uses inline CSS.</p>
+            </div>
+
+            <div class="method">
+                <h3>2. Internal CSS</h3>
+                <p class="internal-style">This paragraph uses internal CSS (in &lt;style&gt; tag).</p>
+            </div>
+
+            <div class="method">
+                <h3>3. External CSS</h3>
+                <p class="external-style">This paragraph uses external CSS (from styles.css file).</p>
+            </div>
+        </section>
+
+        <section class="topic">
+            <h2>CSS Syntax</h2>
+            <pre>
+selector {
+    property: value;
+    property: value;
+}
+            </pre>
+            <p class="example">Example: This text demonstrates CSS styling.</p>
+        </section>
+    </div>
+
+    <style>
+        /* Internal CSS Example */
+        .internal-style {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>
+
+

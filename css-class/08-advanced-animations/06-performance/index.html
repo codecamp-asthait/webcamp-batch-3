@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Performance - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animation Performance</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Animation performance is crucial for smooth user experiences. Understanding which properties to animate, how to optimize animations, and when to use hardware acceleration can make the difference between smooth and janky animations.</p>
+        </section>
+
+        <section class="section">
+            <h2>Hardware-Accelerated Properties</h2>
+            <div class="performance-demo">
+                <div class="perf-box gpu-accelerated">GPU Accelerated</div>
+                <div class="perf-box cpu-heavy">CPU Heavy</div>
+            </div>
+            <p class="info">GPU-accelerated properties (transform, opacity) perform better than layout properties (width, height, margin).</p>
+        </section>
+
+        <section class="section">
+            <h2>Will-Change Property</h2>
+            <div class="willchange-demo">
+                <div class="willchange-box">Will-Change Optimized</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Transform vs Position</h2>
+            <div class="comparison-demo">
+                <div class="comp-box transform-box">Transform (Better)</div>
+                <div class="comp-box position-box">Position (Slower)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Animation Optimization Tips</h2>
+            <div class="tips-list">
+                <div class="tip-item">
+                    <h3>✅ Use Transform and Opacity</h3>
+                    <p>These properties are GPU-accelerated and don't trigger layout or paint.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>✅ Avoid Layout Properties</h3>
+                    <p>Don't animate width, height, margin, padding - they trigger layout recalculation.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>✅ Use Will-Change Sparingly</h3>
+                    <p>Hint the browser about upcoming changes, but don't overuse.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>✅ Limit Simultaneous Animations</h3>
+                    <p>Too many animations can impact performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Optimize your animations! Try:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Converting position animations to transform</li>
+                    <li>Using will-change for upcoming animations</li>
+                    <li>Avoiding layout-triggering properties</li>
+                    <li>Optimizing animation performance</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

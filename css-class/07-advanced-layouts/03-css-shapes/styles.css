@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #333;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-size: 1.6em;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.demo-area {
+    position: relative;
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.shape {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* Circle Shape */
+.circle-shape {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    shape-margin: 10px;
+}
+
+/* Ellipse Shape */
+.ellipse-shape {
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    shape-outside: ellipse(50% 50%);
+    shape-margin: 10px;
+}
+
+/* Polygon Shape */
+.polygon-shape {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 150px solid #667eea;
+    background: none;
+    shape-outside: polygon(50% 0%, 100% 100%, 0% 100%);
+    shape-margin: 10px;
+    float: left;
+}
+
+.polygon-shape::before {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* Inset Shape */
+.inset-shape {
+    width: 150px;
+    height: 150px;
+    shape-outside: inset(20px round 15px);
+    shape-margin: 10px;
+}
+
+.demo-area p {
+    text-align: justify;
+    color: #555;
+}
+
+.complex-demo {
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.complex-demo p {
+    text-align: justify;
+    color: #555;
+}
+
+.complex-demo .circle-shape {
+    margin-left: 20px;
+    float: right;
+}
+
+/* Clear Floats */
+.section::after,
+.demo-area::after,
+.complex-demo::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .shape {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .circle-shape,
+    .ellipse-shape,
+    .inset-shape {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .demo-area p {
+        text-align: left;
+    }
+
+    .complex-demo .circle-shape {
+        float: none;
+        margin-left: 0;
+    }
+}

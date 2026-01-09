@@ -1,0 +1,300 @@
+/* CSS Nesting - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+/* Basic Nesting */
+.nesting-demo {
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+    h3 {
+        color: #667eea;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+    
+    p {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+        
+        &:hover {
+            transform: translateY(-2px);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Nested Selectors */
+.nested-selectors {
+    margin-top: 20px;
+}
+
+.parent {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 30px;
+    border-radius: 8px;
+    
+    .child {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .sibling {
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 15px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+}
+
+/* Nested Pseudo-classes */
+.pseudo-demo {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hover-button {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+    }
+    
+    &:active {
+        transform: translateY(-1px);
+    }
+    
+    &:focus {
+        outline: 3px solid rgba(79, 172, 254, 0.5);
+        outline-offset: 2px;
+    }
+}
+
+.link-demo {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: #667eea;
+        color: white;
+    }
+    
+    &:visited {
+        color: #764ba2;
+    }
+    
+    &:focus {
+        outline: 3px solid rgba(102, 126, 234, 0.5);
+        outline-offset: 2px;
+    }
+}
+
+/* Nested Media Queries */
+.media-demo {
+    margin-top: 20px;
+}
+
+.responsive-box {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+    @media (max-width: 768px) {
+        padding: 30px;
+        font-size: 1em;
+    }
+    
+    @media (max-width: 480px) {
+        padding: 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* Complex Nesting Example */
+.complex-nesting {
+    margin-top: 20px;
+}
+
+.navigation {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+        li {
+            position: relative;
+            
+            a {
+                color: #666;
+                text-decoration: none;
+                padding: 12px 24px;
+                border-radius: 6px;
+                display: block;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+                
+                &:hover {
+                    background: #f8f9fa;
+                    color: #667eea;
+                    border-color: #667eea;
+                }
+                
+                &:active {
+                    background: #667eea;
+                    color: white;
+                }
+                
+                &:focus {
+                    outline: 3px solid rgba(102, 126, 234, 0.5);
+                    outline-offset: 2px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        ul {
+            flex-direction: column;
+            gap: 10px;
+            
+            li a {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}

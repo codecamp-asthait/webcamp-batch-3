@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters and Backdrop Filters - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Filters and Backdrop Filters</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS filters allow you to apply visual effects like blur, brightness, contrast, and more to elements. Backdrop filters apply these effects to the area behind an element, creating beautiful glassmorphism effects.</p>
+        </section>
+
+        <section class="section">
+            <h2>Filter Functions</h2>
+            <div class="filter-grid">
+                <div class="filter-item">
+                    <div class="filter-demo blur-demo">
+                        <h3>Blur</h3>
+                        <p>filter: blur(5px)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo brightness-demo">
+                        <h3>Brightness</h3>
+                        <p>filter: brightness(1.5)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo contrast-demo">
+                        <h3>Contrast</h3>
+                        <p>filter: contrast(150%)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo grayscale-demo">
+                        <h3>Grayscale</h3>
+                        <p>filter: grayscale(100%)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo hue-demo">
+                        <h3>Hue Rotate</h3>
+                        <p>filter: hue-rotate(90deg)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo invert-demo">
+                        <h3>Invert</h3>
+                        <p>filter: invert(100%)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo opacity-demo">
+                        <h3>Opacity</h3>
+                        <p>filter: opacity(50%)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo saturate-demo">
+                        <h3>Saturate</h3>
+                        <p>filter: saturate(200%)</p>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <div class="filter-demo sepia-demo">
+                        <h3>Sepia</h3>
+                        <p>filter: sepia(100%)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Combining Multiple Filters</h2>
+            <div class="combined-filters">
+                <div class="combined-demo combo1">
+                    <h3>Blur + Brightness</h3>
+                    <p>filter: blur(3px) brightness(1.2)</p>
+                </div>
+                <div class="combined-demo combo2">
+                    <h3>Grayscale + Contrast</h3>
+                    <p>filter: grayscale(50%) contrast(120%)</p>
+                </div>
+                <div class="combined-demo combo3">
+                    <h3>Multiple Effects</h3>
+                    <p>filter: blur(2px) brightness(1.1) saturate(150%)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Backdrop Filter: Glassmorphism Effect</h2>
+            <div class="backdrop-container">
+                <div class="backdrop-content">
+                    <div class="glass-card">
+                        <h3>Glass Card</h3>
+                        <p>This card uses backdrop-filter to blur the background behind it, creating a modern glassmorphism effect.</p>
+                        <button class="glass-button">Click Me</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Interactive Filter Controls</h2>
+            <div class="interactive-demo">
+                <div class="controls-panel">
+                    <label>
+                        Blur: <span id="blurValue">0</span>px
+                        <input type="range" id="blurSlider" min="0" max="20" value="0" oninput="updateFilters()">
+                    </label>
+                    <label>
+                        Brightness: <span id="brightnessValue">100</span>%
+                        <input type="range" id="brightnessSlider" min="0" max="200" value="100" oninput="updateFilters()">
+                    </label>
+                    <label>
+                        Contrast: <span id="contrastValue">100</span>%
+                        <input type="range" id="contrastSlider" min="0" max="200" value="100" oninput="updateFilters()">
+                    </label>
+                    <label>
+                        Saturation: <span id="saturateValue">100</span>%
+                        <input type="range" id="saturateSlider" min="0" max="200" value="100" oninput="updateFilters()">
+                    </label>
+                    <label>
+                        Hue Rotate: <span id="hueValue">0</span>deg
+                        <input type="range" id="hueSlider" min="0" max="360" value="0" oninput="updateFilters()">
+                    </label>
+                    <button onclick="resetFilters()">Reset All</button>
+                </div>
+                <div class="preview-area">
+                    <div class="preview-image" id="previewImage">
+                        <div class="image-overlay">
+                            <h3>Preview Image</h3>
+                            <p>Adjust the sliders to see the filter effects!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Hover Effects with Filters</h2>
+            <div class="hover-grid">
+                <div class="hover-card hover-blur">Hover for Blur</div>
+                <div class="hover-card hover-bright">Hover for Brightness</div>
+                <div class="hover-card hover-saturate">Hover for Saturation</div>
+                <div class="hover-card hover-grayscale">Hover for Grayscale</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with filters! Try creating your own filter combinations.</p>
+            <div class="practice-box">
+                <h3>Your Turn</h3>
+                <p>Create a card with:</p>
+                <ul>
+                    <li>Backdrop filter blur effect</li>
+                    <li>Hover state with brightness increase</li>
+                    <li>Combined filters for a unique look</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function updateFilters() {
+            const blur = document.getElementById('blurSlider').value;
+            const brightness = document.getElementById('brightnessSlider').value;
+            const contrast = document.getElementById('contrastSlider').value;
+            const saturate = document.getElementById('saturateSlider').value;
+            const hue = document.getElementById('hueSlider').value;
+            
+            document.getElementById('blurValue').textContent = blur;
+            document.getElementById('brightnessValue').textContent = brightness;
+            document.getElementById('contrastValue').textContent = contrast;
+            document.getElementById('saturateValue').textContent = saturate;
+            document.getElementById('hueValue').textContent = hue;
+            
+            const filter = `blur(${blur}px) brightness(${brightness}%) contrast(${contrast}%) saturate(${saturate}%) hue-rotate(${hue}deg)`;
+            document.getElementById('previewImage').style.filter = filter;
+        }
+        
+        function resetFilters() {
+            document.getElementById('blurSlider').value = 0;
+            document.getElementById('brightnessSlider').value = 100;
+            document.getElementById('contrastSlider').value = 100;
+            document.getElementById('saturateSlider').value = 100;
+            document.getElementById('hueSlider').value = 0;
+            updateFilters();
+        }
+    </script>
+</body>
+</html>

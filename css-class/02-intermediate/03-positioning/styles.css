@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    padding-top: 80px; /* Space for fixed nav */
+}
+
+/* Fixed Navigation */
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.demo-box {
+    background: white;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    margin-bottom: 15px;
+    min-height: 150px;
+}
+
+.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    padding: 10px 15px;
+    border-left: 4px solid #17a2b8;
+    margin-top: 15px;
+}
+
+/* Static Examples */
+.static-box {
+    background: #3498db;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* Relative Examples */
+.relative-container {
+    position: relative;
+    min-height: 200px;
+}
+
+.relative-box {
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.box-2 {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    background: #e74c3c;
+}
+
+/* Absolute Examples */
+.absolute-container {
+    position: relative;
+    background: #ecf0f1;
+    min-height: 300px;
+    padding: 20px;
+    border: 3px solid #95a5a6;
+    border-radius: 8px;
+}
+
+.absolute-box {
+    position: absolute;
+    background: #9b59b6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}
+
+.centered {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e67e22;
+    font-size: 1.2em;
+}
+
+/* Sticky Examples */
+.sticky-demo {
+    background: white;
+    border: 2px solid #ddd;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: #f39c12;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sticky-content {
+    padding: 20px;
+}
+
+.sticky-content p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Z-Index Examples */
+.z-index-container {
+    position: relative;
+    height: 200px;
+}
+
+.z-box {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.z-1 {
+    background: #e74c3c;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.z-2 {
+    background: #3498db;
+    top: 60px;
+    left: 100px;
+    z-index: 2;
+}
+
+.z-3 {
+    background: #2ecc71;
+    top: 40px;
+    left: 60px;
+    z-index: 3;
+}
+
+/* Card with Badge */
+.card-demo {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.card-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Tooltip */
+.tooltip-demo {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.tooltip-trigger {
+    position: relative;
+    background: #34495e;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid transparent;
+    border-top-color: #2c3e50;
+}
+
+.tooltip-trigger:hover .tooltip {
+    opacity: 1;
+}
+
+/* Modal */
+.show-modal-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-content button {
+    background: #764ba2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Scroll Content */
+.scroll-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.scroll-content p {
+    margin: 100px 0;
+    font-size: 1.5em;
+    color: #7f8c8d;
+}

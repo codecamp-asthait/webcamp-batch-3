@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit and Object-position - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Object-fit and Object-position</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>The <code>object-fit</code> property controls how replaced elements (like images and videos) are resized to fit their container. <code>object-position</code> controls the positioning of the object within its container.</p>
+        </section>
+
+        <section class="section">
+            <h2>Object-fit Values</h2>
+            <div class="fit-grid">
+                <div class="fit-item">
+                    <div class="fit-container">
+                        <div class="fit-demo fill">fill</div>
+                    </div>
+                    <p><strong>fill</strong> - Stretches to fill container</p>
+                </div>
+                <div class="fit-item">
+                    <div class="fit-container">
+                        <div class="fit-demo contain">contain</div>
+                    </div>
+                    <p><strong>contain</strong> - Fits entire object</p>
+                </div>
+                <div class="fit-item">
+                    <div class="fit-container">
+                        <div class="fit-demo cover">cover</div>
+                    </div>
+                    <p><strong>cover</strong> - Fills container, may crop</p>
+                </div>
+                <div class="fit-item">
+                    <div class="fit-container">
+                        <div class="fit-demo none">none</div>
+                    </div>
+                    <p><strong>none</strong> - Original size</p>
+                </div>
+                <div class="fit-item">
+                    <div class="fit-container">
+                        <div class="fit-demo scale-down">scale-down</div>
+                    </div>
+                    <p><strong>scale-down</strong> - Like none or contain</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Image Examples</h2>
+            <div class="image-grid">
+                <div class="image-item">
+                    <div class="image-container">
+                        <div class="image-demo img-fill"></div>
+                    </div>
+                    <p>fill</p>
+                </div>
+                <div class="image-item">
+                    <div class="image-container">
+                        <div class="image-demo img-contain"></div>
+                    </div>
+                    <p>contain</p>
+                </div>
+                <div class="image-item">
+                    <div class="image-container">
+                        <div class="image-demo img-cover"></div>
+                    </div>
+                    <p>cover</p>
+                </div>
+                <div class="image-item">
+                    <div class="image-container">
+                        <div class="image-demo img-none"></div>
+                    </div>
+                    <p>none</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Object-position</h2>
+            <p>Control where the object is positioned within its container:</p>
+            <div class="position-grid">
+                <div class="position-item">
+                    <div class="position-container">
+                        <div class="position-demo pos-center">center</div>
+                    </div>
+                    <p>center</p>
+                </div>
+                <div class="position-item">
+                    <div class="position-container">
+                        <div class="position-demo pos-top">top</div>
+                    </div>
+                    <p>top</p>
+                </div>
+                <div class="position-item">
+                    <div class="position-container">
+                        <div class="position-demo pos-bottom">bottom</div>
+                    </div>
+                    <p>bottom</p>
+                </div>
+                <div class="position-item">
+                    <div class="position-container">
+                        <div class="position-demo pos-left">left</div>
+                    </div>
+                    <p>left</p>
+                </div>
+                <div class="position-item">
+                    <div class="position-container">
+                        <div class="position-demo pos-right">right</div>
+                    </div>
+                    <p>right</p>
+                </div>
+                <div class="position-item">
+                    <div class="position-container">
+                        <div class="position-demo pos-custom">25% 75%</div>
+                    </div>
+                    <p>25% 75%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Real-World Examples</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>Profile Picture</h3>
+                    <div class="profile-container">
+                        <div class="profile-image"></div>
+                    </div>
+                    <p>Using cover for circular profile images</p>
+                </div>
+                <div class="example-card">
+                    <h3>Thumbnail Gallery</h3>
+                    <div class="thumbnail-container">
+                        <div class="thumbnail"></div>
+                    </div>
+                    <p>Using cover for consistent thumbnails</p>
+                </div>
+                <div class="example-card">
+                    <h3>Hero Image</h3>
+                    <div class="hero-container">
+                        <div class="hero-image"></div>
+                    </div>
+                    <p>Using cover with object-position</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with object-fit and object-position! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A responsive image gallery with consistent sizing</li>
+                    <li>A profile picture component with cover fit</li>
+                    <li>A hero section with positioned background image</li>
+                    <li>A card layout with properly fitted images</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Subgrid - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Subgrid</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS Subgrid allows a grid item to inherit the grid tracks of its parent grid, enabling nested grids to align with their parent's grid lines. This creates perfectly aligned layouts across nested elements.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Subgrid Example</h2>
+            <div class="parent-grid">
+                <div class="grid-item item-1">
+                    <h3>Item 1</h3>
+                    <p>Content with subgrid</p>
+                </div>
+                <div class="grid-item item-2">
+                    <h3>Item 2</h3>
+                    <p>Content with subgrid</p>
+                </div>
+                <div class="grid-item item-3">
+                    <h3>Item 3</h3>
+                    <p>Content with subgrid</p>
+                </div>
+                <div class="grid-item item-4">
+                    <h3>Item 4</h3>
+                    <p>Content with subgrid</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Subgrid Rows</h2>
+            <div class="parent-grid-rows">
+                <div class="row-item">
+                    <div class="row-content">Row 1</div>
+                    <div class="row-content">Row 2</div>
+                    <div class="row-content">Row 3</div>
+                </div>
+                <div class="row-item">
+                    <div class="row-content">Row 1</div>
+                    <div class="row-content">Row 2</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Subgrid Columns</h2>
+            <div class="parent-grid-cols">
+                <div class="col-item">
+                    <div class="col-content">Col 1</div>
+                    <div class="col-content">Col 2</div>
+                    <div class="col-content">Col 3</div>
+                </div>
+                <div class="col-item">
+                    <div class="col-content">Col 1</div>
+                    <div class="col-content">Col 2</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Card Layout with Subgrid</h2>
+            <div class="card-grid">
+                <div class="card-item">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">Body content goes here</div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">Body content with more text to demonstrate alignment</div>
+                    <div class="card-footer">Footer</div>
+                </div>
+                <div class="card-item">
+                    <div class="card-header">Header</div>
+                    <div class="card-body">Body</div>
+                    <div class="card-footer">Footer</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Complex Layout Example</h2>
+            <div class="complex-grid">
+                <div class="complex-item">
+                    <div class="complex-header">Header</div>
+                    <div class="complex-sidebar">Sidebar</div>
+                    <div class="complex-main">Main Content</div>
+                    <div class="complex-footer">Footer</div>
+                </div>
+                <div class="complex-item">
+                    <div class="complex-header">Header</div>
+                    <div class="complex-sidebar">Sidebar</div>
+                    <div class="complex-main">Main Content Area</div>
+                    <div class="complex-footer">Footer</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with subgrid! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A card layout with aligned headers and footers</li>
+                    <li>A dashboard grid with nested subgrids</li>
+                    <li>A complex layout with multiple subgrid items</li>
+                    <li>A responsive grid that uses subgrid for alignment</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

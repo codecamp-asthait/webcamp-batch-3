@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Contrast and WCAG - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Contrast and WCAG</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Color contrast is crucial for accessibility. WCAG (Web Content Accessibility Guidelines) defines minimum contrast ratios to ensure text is readable for users with visual impairments. Meeting these guidelines makes your content accessible to more users.</p>
+        </section>
+
+        <section class="section">
+            <h2>WCAG Contrast Ratios</h2>
+            <div class="contrast-demo">
+                <div class="contrast-item aa-large">AA Large Text (3:1)</div>
+                <div class="contrast-item aa-normal">AA Normal Text (4.5:1)</div>
+                <div class="contrast-item aaa-large">AAA Large Text (4.5:1)</div>
+                <div class="contrast-item aaa-normal">AAA Normal Text (7:1)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Insufficient Contrast (Bad Examples)</h2>
+            <div class="bad-contrast-demo">
+                <div class="bad-item low-contrast">Low Contrast (Bad)</div>
+                <div class="bad-item very-low">Very Low Contrast (Bad)</div>
+            </div>
+            <p class="warning">⚠️ These examples have insufficient contrast and should not be used!</p>
+        </section>
+
+        <section class="section">
+            <h2>Testing Contrast</h2>
+            <div class="testing-demo">
+                <div class="test-item">
+                    <h3>Tools for Testing</h3>
+                    <ul>
+                        <li>WebAIM Contrast Checker</li>
+                        <li>Chrome DevTools</li>
+                        <li>axe DevTools</li>
+                        <li>Color Contrast Analyzer</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Ensure proper contrast! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Text with WCAG AA compliance</li>
+                    <li>Text with WCAG AAA compliance</li>
+                    <li>Test contrast ratios</li>
+                    <li>Fix insufficient contrast issues</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

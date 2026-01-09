@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Introduction - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sass Introduction</h1>
+        
+        <section class="section">
+            <h2>What is Sass?</h2>
+            <p>Sass (Syntactically Awesome Stylesheets) is a CSS preprocessor that extends CSS with powerful programming features like variables, nesting, mixins, and functions.</p>
+            <p>Sass code is compiled into standard CSS that browsers understand.</p>
+        </section>
+
+        <section class="section">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Variables</h3>
+                    <p>Store and reuse values throughout your stylesheets.</p>
+                    <code>$primary-color: #667eea;</code>
+                </div>
+                <div class="feature-card">
+                    <h3>Nesting</h3>
+                    <p>Organize related selectors in a hierarchical structure.</p>
+                    <code>.card { &:hover { ... } }</code>
+                </div>
+                <div class="feature-card">
+                    <h3>Mixins</h3>
+                    <p>Create reusable blocks of CSS declarations.</p>
+                    <code>@include flex-center;</code>
+                </div>
+                <div class="feature-card">
+                    <h3>Functions</h3>
+                    <p>Perform calculations and transformations on values.</p>
+                    <code>scale($base-size * 2)</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Variables Example</h2>
+            <div class="code-example">
+                <div class="code-block">
+                    <h3>Scss</h3>
+                    <pre>$primary: #667eea;
+$spacing: 16px;
+
+body {
+    color: $primary;
+    padding: $spacing;
+}</pre>
+                </div>
+                <div class="code-block">
+                    <h3>Compiled CSS</h3>
+                    <pre>body {
+    color: #667eea;
+    padding: 16px;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Nesting Example</h2>
+            <div class="nesting-demo">
+                <div class="card">
+                    <div class="card-header">Card Header</div>
+                    <div class="card-body">Card Body Content</div>
+                </div>
+                <p class="description">Hover over the card to see nesting in action</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Mixins Example</h2>
+            <div class="mixin-demo">
+                <div class="flex-container">
+                    <div class="flex-item">Item 1</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <p class="description">Using the @include flex-center mixin for layout</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Getting Started</h2>
+            <div class="getting-started">
+                <ol>
+                    <li>Install Node.js from nodejs.org</li>
+                    <li>Install Sass: <code>npm install -g sass</code></li>
+                    <li>Create a .scss file</li>
+                    <li>Compile: <code>sass input.scss output.css</code></li>
+                    <li>Or use watch mode: <code>sass --watch .</code></li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

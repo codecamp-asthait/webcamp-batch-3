@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neumorphism</h1>
+        
+        <section class="intro">
+            <h2>Soft, Tactile Design</h2>
+            <p>Create depth using subtle shadows and highlights without stark contrast.</p>
+        </section>
+
+        <section class="buttons">
+            <h2>Neumorphic Buttons</h2>
+            <div class="button-grid">
+                <button class="neu-button">Raised Button</button>
+                <button class="neu-button neu-pressed">Pressed Button</button>
+                <button class="neu-button neu-hovered">Hover Me</button>
+                <button class="neu-button neu-active">Active Button</button>
+            </div>
+        </section>
+
+        <section class="cards">
+            <h2>Neumorphic Cards</h2>
+            <div class="card-grid">
+                <div class="neu-card">
+                    <h3>Card 1</h3>
+                    <p>Soft neumorphic style card</p>
+                </div>
+                <div class="neu-card">
+                    <h3>Card 2</h3>
+                    <p>Raised shadow effect</p>
+                </div>
+                <div class="neu-card">
+                    <h3>Card 3</h3>
+                    <p>Minimal design approach</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="inputs">
+            <h2>Neumorphic Form Elements</h2>
+            <div class="form-grid">
+                <input type="text" class="neu-input" placeholder="Enter text">
+                <input type="email" class="neu-input" placeholder="Email address">
+                <input type="password" class="neu-input" placeholder="Password">
+                <select class="neu-select">
+                    <option>Select option</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="depth-levels">
+            <h2>Depth Variations</h2>
+            <div class="depth-grid">
+                <div class="neu-depth shallow">
+                    <p>Shallow Depth</p>
+                </div>
+                <div class="neu-depth medium">
+                    <p>Medium Depth</p>
+                </div>
+                <div class="neu-depth deep">
+                    <p>Deep Depth</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="toggles">
+            <h2>Neumorphic Toggle</h2>
+            <div class="toggle-grid">
+                <div class="neu-toggle">
+                    <input type="checkbox" class="toggle-checkbox">
+                    <label class="toggle-label">
+                        <span class="toggle-switch"></span>
+                    </label>
+                </div>
+                <div class="neu-toggle">
+                    <input type="checkbox" class="toggle-checkbox" checked>
+                    <label class="toggle-label">
+                        <span class="toggle-switch"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="state-changes">
+            <h2>Interactive State Changes</h2>
+            <div class="state-grid">
+                <div class="neu-interactive">
+                    <span>Default</span>
+                </div>
+                <div class="neu-interactive neu-interactive-hover">
+                    <span>Hover (Shallow)</span>
+                </div>
+                <div class="neu-interactive neu-interactive-active">
+                    <span>Active (Pressed)</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="code-examples">
+            <h2>Code Examples</h2>
+            <div class="code-example">
+                <h3>Raised Button</h3>
+                <pre>.neu-button {
+    box-shadow: 5px 5px 10px #b8b9be,
+                -5px -5px 10px #ffffff;
+}</pre>
+            </div>
+            <div class="code-example">
+                <h3>Pressed Button</h3>
+                <pre>.neu-button:active {
+    box-shadow: inset 5px 5px 10px #b8b9be,
+                inset -5px -5px 10px #ffffff;
+}</pre>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <h2>Best Practices</h2>
+            <ul class="practices-list">
+                <li>Maintain high color contrast for readability</li>
+                <li>Use neutral color palette (grays, whites)</li>
+                <li>Test with high contrast mode enabled</li>
+                <li>Provide clear focus states for accessibility</li>
+                <li>Use consistent shadow direction</li>
+                <li>Animate state changes smoothly</li>
+                <li>Test on various display types</li>
+                <li>Consider dark mode compatibility</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

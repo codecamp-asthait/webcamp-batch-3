@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #333;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-size: 1.6em;
+}
+
+h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.info-section p {
+    font-size: 1.05em;
+    line-height: 1.9;
+}
+
+.concept-diagram {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flow-source,
+.flow-regions {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.flow-source h3,
+.flow-regions h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.flow-source p,
+.flow-regions p {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.flow-arrow {
+    font-size: 2em;
+    color: #667eea;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.use-case {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.use-case:hover {
+    border-color: #667eea;
+}
+
+.use-case h3 {
+    margin-top: 0;
+}
+
+.use-case p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.syntax-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.example-code {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.example-code h3 {
+    margin-top: 0;
+}
+
+.example-code pre {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.support-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.warning,
+.alternatives {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.warning {
+    border-color: #e74c3c;
+}
+
+.warning h3 {
+    color: #e74c3c;
+}
+
+.alternatives {
+    border-color: #27ae60;
+}
+
+.alternatives h3 {
+    color: #27ae60;
+}
+
+.alternatives ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.alternatives li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.alternatives li:last-child {
+    border-bottom: none;
+}
+
+.alternatives strong {
+    color: #333;
+}
+
+.considerations-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.consideration {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.consideration h3 {
+    margin-top: 0;
+}
+
+.consideration p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .use-cases-grid,
+    .syntax-example,
+    .support-info,
+    .considerations-list {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-diagram {
+        flex-direction: column;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}

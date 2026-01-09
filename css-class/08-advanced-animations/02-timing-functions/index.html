@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Timing Functions - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animation Timing Functions</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Timing functions control the speed curve of animations, determining how the animation progresses over time. Understanding timing functions is crucial for creating natural, polished animations that feel right to users.</p>
+        </section>
+
+        <section class="section">
+            <h2>Built-in Timing Functions</h2>
+            <div class="timing-demo">
+                <div class="anim-box ease">ease</div>
+                <div class="anim-box linear">linear</div>
+                <div class="anim-box ease-in">ease-in</div>
+                <div class="anim-box ease-out">ease-out</div>
+                <div class="anim-box ease-in-out">ease-in-out</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Cubic Bezier Functions</h2>
+            <div class="bezier-demo">
+                <div class="anim-box bezier-1">cubic-bezier(0.68, -0.55, 0.265, 1.55)</div>
+                <div class="anim-box bezier-2">cubic-bezier(0.25, 0.46, 0.45, 0.94)</div>
+                <div class="anim-box bezier-3">cubic-bezier(0.55, 0.055, 0.675, 0.19)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Steps Functions</h2>
+            <div class="steps-demo">
+                <div class="anim-box steps-start">steps(5, start)</div>
+                <div class="anim-box steps-end">steps(5, end)</div>
+                <div class="anim-box steps-both">steps(5, jump-both)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Visual Comparison</h2>
+            <div class="comparison-demo">
+                <div class="comparison-item">
+                    <div class="label">ease</div>
+                    <div class="track">
+                        <div class="ball ease-comp"></div>
+                    </div>
+                </div>
+                <div class="comparison-item">
+                    <div class="label">linear</div>
+                    <div class="track">
+                        <div class="ball linear-comp"></div>
+                    </div>
+                </div>
+                <div class="comparison-item">
+                    <div class="label">ease-in</div>
+                    <div class="track">
+                        <div class="ball ease-in-comp"></div>
+                    </div>
+                </div>
+                <div class="comparison-item">
+                    <div class="label">ease-out</div>
+                    <div class="track">
+                        <div class="ball ease-out-comp"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with timing functions! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Custom cubic-bezier timing functions</li>
+                    <li>Step-based animations for sprite effects</li>
+                    <li>Bounce and elastic effects with timing functions</li>
+                    <li>Natural-feeling animations with proper timing</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

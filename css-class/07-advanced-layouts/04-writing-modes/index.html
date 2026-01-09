@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Modes - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Writing Modes</h1>
+        
+        <section class="section">
+            <h2>Horizontal Writing (Default)</h2>
+            <div class="writing-demo">
+                <div class="text horizontal">
+                    <p>This is the default horizontal-tb writing mode. Text flows from left to right and top to bottom.</p>
+                </div>
+                <div class="description">writing-mode: horizontal-tb</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Vertical Right-to-Left</h2>
+            <div class="writing-demo">
+                <div class="text vertical-rl">
+                    <p>This uses vertical-rl writing mode. Text flows from top to bottom, right to left.</p>
+                </div>
+                <div class="description">writing-mode: vertical-rl</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Vertical Left-to-Right</h2>
+            <div class="writing-demo">
+                <div class="text vertical-lr">
+                    <p>This uses vertical-lr writing mode. Text flows from top to bottom, left to right.</p>
+                </div>
+                <div class="description">writing-mode: vertical-lr</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Text Orientation: Mixed</h2>
+            <div class="writing-demo">
+                <div class="text vertical-mixed">
+                    <p>This demonstrates text-orientation: mixed in vertical mode. Different character types rotate differently.</p>
+                </div>
+                <div class="description">writing-mode: vertical-rl | text-orientation: mixed</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Text Orientation: Upright</h2>
+            <div class="writing-demo">
+                <div class="text vertical-upright">
+                    <p>This shows text-orientation: upright. Characters remain upright even in vertical mode.</p>
+                </div>
+                <div class="description">writing-mode: vertical-rl | text-orientation: upright</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Combined Layout</h2>
+            <div class="combined-layout">
+                <div class="vertical-content">
+                    <h3>Vertical</h3>
+                    <div class="text vertical-rl">
+                        <p>Content in vertical writing mode</p>
+                    </div>
+                </div>
+                <div class="horizontal-content">
+                    <h3>Horizontal</h3>
+                    <p>Content in standard horizontal mode. You can mix writing modes in the same page for creative layouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Logical Properties Example</h2>
+            <div class="logical-demo">
+                <p>Using logical properties (inline-start, block-start) ensures correct spacing regardless of writing mode. These adapt to the current writing direction.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

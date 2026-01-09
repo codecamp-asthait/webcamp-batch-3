@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Layouts - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fluid Layouts</h1>
+        
+        <section class="intro">
+            <h2>Flexible Sizing Without Breakpoints</h2>
+            <p>Fluid layouts use percentages and flexible units to adapt smoothly to any screen size without discrete breakpoints.</p>
+        </section>
+
+        <section class="percentage-section">
+            <h2>Percentage-Based Widths</h2>
+            <div class="percent-example">
+                <div class="percent-box percent-full">100%</div>
+                <div class="percent-box percent-half">50%</div>
+                <div class="percent-box percent-third">33%</div>
+                <div class="percent-box percent-quarter">25%</div>
+            </div>
+        </section>
+
+        <section class="flexbox-section">
+            <h2>Flexible Box Layout</h2>
+            <p>Flexbox distributes space automatically, perfect for fluid layouts:</p>
+            <div class="flex-example">
+                <div class="flex-item flex-1">flex: 1</div>
+                <div class="flex-item flex-1">flex: 1</div>
+                <div class="flex-item flex-1">flex: 1</div>
+            </div>
+            <div class="flex-example">
+                <div class="flex-item flex-2">flex: 2</div>
+                <div class="flex-item flex-1">flex: 1</div>
+            </div>
+        </section>
+
+        <section class="grid-section">
+            <h2>CSS Grid Auto-Fit</h2>
+            <p>Create responsive columns without media queries:</p>
+            <div class="grid-example">
+                <div class="grid-item">Card 1</div>
+                <div class="grid-item">Card 2</div>
+                <div class="grid-item">Card 3</div>
+                <div class="grid-item">Card 4</div>
+                <div class="grid-item">Card 5</div>
+                <div class="grid-item">Card 6</div>
+            </div>
+        </section>
+
+        <section class="calc-section">
+            <h2>Using calc() Function</h2>
+            <div class="calc-demo">
+                <div class="calc-box">
+                    <p>calc(100% - 40px)</p>
+                    <p class="calc-note">Width minus padding</p>
+                </div>
+                <div class="calc-box">
+                    <p>calc(1.5rem + 1vw)</p>
+                    <p class="calc-note">Font size scaling</p>
+                </div>
+                <div class="calc-box">
+                    <p>calc(2rem + 3vw)</p>
+                    <p class="calc-note">Flexible spacing</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="clamp-section">
+            <h2>Clamp Function for Smooth Scaling</h2>
+            <p>Set minimum, preferred, and maximum values:</p>
+            <div class="clamp-demo">
+                <div class="clamp-box">
+                    <h3 class="clamp-heading">Fluid Heading</h3>
+                    <p class="clamp-note">clamp(1.5rem, 5vw, 3rem)</p>
+                </div>
+                <div class="clamp-box">
+                    <div class="clamp-width">Fluid Width</div>
+                    <p class="clamp-note">clamp(320px, 90%, 1200px)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="aspect-ratio-demo">
+            <h2>Aspect Ratio Maintenance</h2>
+            <p>Maintain proportions across all sizes:</p>
+            <div class="aspect-grid">
+                <div class="aspect-box ratio-16-9">
+                    <span>16:9</span>
+                </div>
+                <div class="aspect-box ratio-4-3">
+                    <span>4:3</span>
+                </div>
+                <div class="aspect-box ratio-1-1">
+                    <span>1:1</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="patterns-section">
+            <h2>Common Fluid Patterns</h2>
+            <div class="pattern-grid">
+                <div class="pattern">
+                    <div class="sidebar-pattern">
+                        <div class="sidebar">Sidebar 25%</div>
+                        <div class="content">Content 75%</div>
+                    </div>
+                    <p class="pattern-label">Sidebar Layout</p>
+                </div>
+                <div class="pattern">
+                    <div class="card-pattern">
+                        <div class="card-item">Card</div>
+                        <div class="card-item">Card</div>
+                        <div class="card-item">Card</div>
+                    </div>
+                    <p class="pattern-label">Card Grid</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="constraints-section">
+            <h2>Min/Max Constraints</h2>
+            <div class="constraints-demo">
+                <div class="constraint-box">
+                    <p>width: 90%</p>
+                    <p>max-width: 1200px</p>
+                    <p>min-width: 320px</p>
+                </div>
+            </div>
+            <p class="constraints-note">These constraints work together to create flexible, bounded layouts.</p>
+        </section>
+
+        <section class="code-examples">
+            <h2>Code Examples</h2>
+            <div class="code-example">
+                <h3>Auto-Fit Grid</h3>
+                <pre>.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}</pre>
+            </div>
+            <div class="code-example">
+                <h3>Flexible Container</h3>
+                <pre>.container {
+    width: clamp(320px, 90%, 1200px);
+    padding: clamp(1rem, 2vw, 3rem);
+    margin: 0 auto;
+}</pre>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <h2>Benefits of Fluid Layouts</h2>
+            <div class="benefits-list">
+                <div class="benefit-item"> Smooth scaling without discrete breakpoints</div>
+                <div class="benefit-item"> Better performance than many media queries</div>
+                <div class="benefit-item"> Works well for dynamic content</div>
+                <div class="benefit-item"> Simpler CSS with fewer rules</div>
+                <div class="benefit-item"> Excellent browser support for modern properties</div>
+                <div class="benefit-item"> More accessible across zoom levels</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

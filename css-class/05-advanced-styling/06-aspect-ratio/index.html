@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspect Ratio - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Aspect Ratio</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>The <code>aspect-ratio</code> property allows you to set a preferred aspect ratio for an element. This is especially useful for responsive images, videos, and containers, eliminating the need for padding hacks or JavaScript calculations.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Aspect Ratios</h2>
+            <div class="ratio-grid">
+                <div class="ratio-item">
+                    <div class="ratio-box ratio-1-1">1:1</div>
+                    <p>Square (1:1)</p>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio-box ratio-16-9">16:9</div>
+                    <p>Widescreen (16:9)</p>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio-box ratio-4-3">4:3</div>
+                    <p>Standard (4:3)</p>
+                </div>
+                <div class="ratio-item">
+                    <div class="ratio-box ratio-21-9">21:9</div>
+                    <p>Ultrawide (21:9)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Common Video Ratios</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-box video-youtube">YouTube</div>
+                    <p>16:9 (YouTube)</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-box video-instagram">Instagram</div>
+                    <p>1:1 (Instagram)</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-box video-tiktok">TikTok</div>
+                    <p>9:16 (TikTok)</p>
+                </div>
+                <div class="video-item">
+                    <div class="video-box video-cinema">Cinema</div>
+                    <p>21:9 (Cinema)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Image Containers</h2>
+            <div class="image-containers-grid">
+                <div class="image-container">
+                    <div class="image-placeholder img-square"></div>
+                    <p>Square Image</p>
+                </div>
+                <div class="image-container">
+                    <div class="image-placeholder img-landscape"></div>
+                    <p>Landscape Image</p>
+                </div>
+                <div class="image-container">
+                    <div class="image-placeholder img-portrait"></div>
+                    <p>Portrait Image</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Responsive Cards</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Card content with consistent image ratio</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Card content with consistent image ratio</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h3>Card Title</h3>
+                        <p>Card content with consistent image ratio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Combined with Object-fit</h2>
+            <div class="combined-grid">
+                <div class="combined-item">
+                    <div class="combined-box combined-cover">
+                        <div class="combined-content">Cover</div>
+                    </div>
+                    <p>aspect-ratio + object-fit: cover</p>
+                </div>
+                <div class="combined-item">
+                    <div class="combined-box combined-contain">
+                        <div class="combined-content">Contain</div>
+                    </div>
+                    <p>aspect-ratio + object-fit: contain</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Flexible Aspect Ratios</h2>
+            <div class="flexible-demo">
+                <div class="flexible-box">Resize the container to see the aspect ratio maintain</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with aspect-ratio! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A responsive image gallery with consistent ratios</li>
+                    <li>A video embed container with 16:9 ratio</li>
+                    <li>A card layout with square image containers</li>
+                    <li>A responsive grid with different aspect ratios</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

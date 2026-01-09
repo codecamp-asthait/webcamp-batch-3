@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Fundamentals - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flexbox Fundamentals</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Flexbox (Flexible Box Layout) is a one-dimensional layout method for arranging items in rows or columns. It makes it easy to align items, distribute space, and create responsive layouts. Flexbox is perfect for components and small-scale layouts.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Flex Container</h2>
+            <div class="flex-container basic-flex">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Flex Direction</h2>
+            <div class="direction-demo">
+                <div class="flex-demo flex-row">
+                    <div class="flex-item">Row (default)</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo flex-row-reverse">
+                    <div class="flex-item">Row Reverse</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo flex-column">
+                    <div class="flex-item">Column</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo flex-column-reverse">
+                    <div class="flex-item">Column Reverse</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Justify Content (Main Axis Alignment)</h2>
+            <div class="justify-demo">
+                <div class="flex-demo justify-start">
+                    <div class="flex-item">Start</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo justify-center">
+                    <div class="flex-item">Center</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo justify-end">
+                    <div class="flex-item">End</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo justify-between">
+                    <div class="flex-item">Space Between</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo justify-around">
+                    <div class="flex-item">Space Around</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo justify-evenly">
+                    <div class="flex-item">Space Evenly</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Align Items (Cross Axis Alignment)</h2>
+            <div class="align-demo">
+                <div class="flex-demo align-stretch">
+                    <div class="flex-item">Stretch</div>
+                    <div class="flex-item tall">Tall Item</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo align-start">
+                    <div class="flex-item">Start</div>
+                    <div class="flex-item tall">Tall Item</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo align-center">
+                    <div class="flex-item">Center</div>
+                    <div class="flex-item tall">Tall Item</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+                <div class="flex-demo align-end">
+                    <div class="flex-item">End</div>
+                    <div class="flex-item tall">Tall Item</div>
+                    <div class="flex-item">Item 3</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Flex Wrap</h2>
+            <div class="wrap-demo">
+                <div class="flex-demo flex-nowrap">
+                    <div class="flex-item">No Wrap</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                    <div class="flex-item">Item 4</div>
+                    <div class="flex-item">Item 5</div>
+                </div>
+                <div class="flex-demo flex-wrap">
+                    <div class="flex-item">Wrap</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                    <div class="flex-item">Item 4</div>
+                    <div class="flex-item">Item 5</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Flex Grow, Shrink, and Basis</h2>
+            <div class="flex-props-demo">
+                <div class="flex-demo">
+                    <div class="flex-item grow-1">Grow 1</div>
+                    <div class="flex-item grow-2">Grow 2</div>
+                    <div class="flex-item grow-1">Grow 1</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Centering Elements</h2>
+            <div class="centering-demo">
+                <div class="centered-box">Perfectly Centered</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Navigation Bar Example</h2>
+            <nav class="nav-example">
+                <div class="nav-logo">Logo</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with Flexbox! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A centered card component</li>
+                    <li>A navigation bar with flexbox</li>
+                    <li>A responsive card layout</li>
+                    <li>A form with flexbox alignment</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

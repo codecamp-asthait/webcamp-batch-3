@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="fixed-nav">
+        <div class="nav-content">
+            <h3>Fixed Navigation</h3>
+            <span>Stays on screen while scrolling</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>CSS Positioning</h1>
+        
+        <section class="section">
+            <h2>Position: Static (Default)</h2>
+            <div class="demo-box">
+                <div class="static-box">Static Element 1</div>
+                <div class="static-box">Static Element 2</div>
+                <div class="static-box">Static Element 3</div>
+            </div>
+            <p class="info">Static elements follow normal document flow.</p>
+        </section>
+
+        <section class="section">
+            <h2>Position: Relative</h2>
+            <div class="demo-box">
+                <div class="relative-container">
+                    <div class="relative-box box-1">Normal Position</div>
+                    <div class="relative-box box-2">Moved Relative (top: 20px, left: 40px)</div>
+                    <div class="relative-box box-3">Normal Position</div>
+                </div>
+            </div>
+            <p class="info">Relative positioning moves element from its normal position but preserves its space.</p>
+        </section>
+
+        <section class="section">
+            <h2>Position: Absolute</h2>
+            <div class="demo-box">
+                <div class="absolute-container">
+                    <p>This is the positioned parent (position: relative)</p>
+                    <div class="absolute-box top-left">Top Left</div>
+                    <div class="absolute-box top-right">Top Right</div>
+                    <div class="absolute-box bottom-left">Bottom Left</div>
+                    <div class="absolute-box bottom-right">Bottom Right</div>
+                    <div class="absolute-box centered">Centered</div>
+                </div>
+            </div>
+            <p class="info">Absolute positioning removes element from flow and positions relative to nearest positioned ancestor.</p>
+        </section>
+
+        <section class="section">
+            <h2>Position: Sticky</h2>
+            <div class="sticky-demo">
+                <div class="sticky-header">
+                    I'm Sticky! Scroll down to see me stick to the top.
+                </div>
+                <div class="sticky-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Z-Index Stacking</h2>
+            <div class="demo-box">
+                <div class="z-index-container">
+                    <div class="z-box z-1">Z-Index: 1</div>
+                    <div class="z-box z-3">Z-Index: 3</div>
+                    <div class="z-box z-2">Z-Index: 2</div>
+                </div>
+            </div>
+            <p class="info">Higher z-index values appear in front of lower values.</p>
+        </section>
+
+        <section class="section">
+            <h2>Real-World: Card with Badge</h2>
+            <div class="card-demo">
+                <div class="card">
+                    <span class="badge">NEW</span>
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+                    <div class="card-content">
+                        <h3>Product Title</h3>
+                        <p>This card demonstrates absolute positioning for the badge.</p>
+                        <button class="card-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Real-World: Tooltip</h2>
+            <div class="tooltip-demo">
+                <button class="tooltip-trigger">
+                    Hover Me
+                    <span class="tooltip">This is a tooltip positioned absolutely!</span>
+                </button>
+            </div>
+        </section>
+
+        <div class="scroll-content">
+            <p>Scroll down to see the fixed navigation stay in place...</p>
+            <p>Keep scrolling...</p>
+            <p>Notice how the fixed nav remains visible...</p>
+            <p>This is the power of position: fixed!</p>
+        </div>
+    </div>
+
+    <!-- Modal Example Button -->
+    <button class="show-modal-btn" onclick="document.getElementById('modal').style.display='flex'">
+        Show Modal
+    </button>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modal" onclick="this.style.display='none'">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+            <h2>Modal Example</h2>
+            <p>This modal uses fixed positioning to overlay the entire page.</p>
+            <button onclick="document.getElementById('modal').style.display='none'">Close</button>
+        </div>
+    </div>
+</body>
+</html>

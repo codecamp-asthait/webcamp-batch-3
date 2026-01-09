@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Less - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Less - Leaner Style Sheets</h1>
+        
+        <section class="section">
+            <h2>What is Less?</h2>
+            <p>Less (Leaner Style Sheets) is a dynamic preprocessor for CSS. It extends CSS with dynamic behavior such as variables, mixins, operations, and functions.</p>
+            <p>Less is similar to Sass but with a different approach and syntax.</p>
+        </section>
+
+        <section class="section">
+            <h2>Comparison: Less vs Sass</h2>
+            <div class="comparison-table">
+                <div class="comparison-item">
+                    <h3>Less</h3>
+                    <ul>
+                        <li>CSS-like syntax</li>
+                        <li>Client and server compilation</li>
+                        <li>Faster to learn</li>
+                        <li>Good for web projects</li>
+                        <li>Similar to original CSS</li>
+                    </ul>
+                </div>
+                <div class="comparison-item">
+                    <h3>Sass</h3>
+                    <ul>
+                        <li>More powerful features</li>
+                        <li>Server-side only</li>
+                        <li>Steeper learning curve</li>
+                        <li>Better for complex projects</li>
+                        <li>More like programming</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Core Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Variables</h3>
+                    <code>@primary-color: #667eea;</code>
+                    <p>Store and reuse values</p>
+                </div>
+                <div class="feature">
+                    <h3>Nesting</h3>
+                    <code>.navbar { .item { } }</code>
+                    <p>Hierarchical selectors</p>
+                </div>
+                <div class="feature">
+                    <h3>Mixins</h3>
+                    <code>.rounded(@r: 4px) { }</code>
+                    <p>Reusable code blocks</p>
+                </div>
+                <div class="feature">
+                    <h3>Operations</h3>
+                    <code>@size * 2</code>
+                    <p>Math calculations</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Variables Example</h2>
+            <div class="code-demo">
+                <div class="code-column">
+                    <h3>Less Code</h3>
+                    <pre>@brand-color: #667eea;
+@spacing: 8px;
+
+.button {
+    background: @brand-color;
+    padding: @spacing * 2;
+}</pre>
+                </div>
+                <div class="code-column">
+                    <h3>Compiled CSS</h3>
+                    <pre>.button {
+    background: #667eea;
+    padding: 16px;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Operations & Functions</h2>
+            <div class="operations-demo">
+                <div class="color-variation">
+                    <div class="color-base">Base Color</div>
+                    <div class="color-lighter">Lighter (10%)</div>
+                    <div class="color-darker">Darker (10%)</div>
+                </div>
+                <p class="description">Using lighten() and darken() functions</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Installation & Usage</h2>
+            <div class="installation">
+                <h3>Step 1: Install Node.js</h3>
+                <p>Download from <strong>nodejs.org</strong></p>
+                
+                <h3>Step 2: Install Less</h3>
+                <code>npm install -g less</code>
+                
+                <h3>Step 3: Create .less Files</h3>
+                <code>touch styles.less</code>
+                
+                <h3>Step 4: Compile</h3>
+                <code>lessc styles.less styles.css</code>
+                
+                <h3>Step 5: Or Watch Changes</h3>
+                <code>lessc --watch styles.less styles.css</code>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Advantages of Less</h2>
+            <div class="advantages">
+                <div class="advantage">
+                    <h3>Easy Syntax</h3>
+                    <p>Very similar to CSS, making it easy for developers to learn</p>
+                </div>
+                <div class="advantage">
+                    <h3>Flexible Compilation</h3>
+                    <p>Can be compiled client-side or server-side</p>
+                </div>
+                <div class="advantage">
+                    <h3>Powerful Features</h3>
+                    <p>Variables, mixins, nesting, functions all included</p>
+                </div>
+                <div class="advantage">
+                    <h3>Community Support</h3>
+                    <p>Active community with great documentation</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

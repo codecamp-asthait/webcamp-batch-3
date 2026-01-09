@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Pseudo-classes - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Structural Pseudo-classes</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Structural pseudo-classes select elements based on their position in the document tree. They allow you to target elements like the first child, last child, nth child, and more, providing powerful ways to style elements based on their structural relationships.</p>
+        </section>
+
+        <section class="section">
+            <h2>:first-child and :last-child</h2>
+            <div class="list-demo">
+                <div class="list-item">Item 1 (First)</div>
+                <div class="list-item">Item 2</div>
+                <div class="list-item">Item 3</div>
+                <div class="list-item">Item 4 (Last)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>:nth-child()</h2>
+            <div class="nth-demo">
+                <div class="nth-item">Item 1</div>
+                <div class="nth-item">Item 2 (2nd)</div>
+                <div class="nth-item">Item 3</div>
+                <div class="nth-item">Item 4 (4th)</div>
+                <div class="nth-item">Item 5</div>
+                <div class="nth-item">Item 6 (6th)</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>:nth-of-type()</h2>
+            <div class="type-demo">
+                <p class="type-item">Paragraph 1</p>
+                <div class="type-item">Div 1</div>
+                <p class="type-item">Paragraph 2 (2nd p)</p>
+                <div class="type-item">Div 2</div>
+                <p class="type-item">Paragraph 3</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>:only-child</h2>
+            <div class="only-demo">
+                <div class="only-item">Only Child</div>
+            </div>
+            <div class="only-demo">
+                <div class="only-item">Not Only</div>
+                <div class="only-item">Not Only</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with structural pseudo-classes! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Zebra striping for tables</li>
+                    <li>Alternating card styles</li>
+                    <li>First and last item styling</li>
+                    <li>Complex nth-child patterns</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

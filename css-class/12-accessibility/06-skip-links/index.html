@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skip Links - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skip Links</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Skip links allow keyboard users to skip repetitive navigation and jump directly to main content. This is essential for accessibility, especially for users who navigate with keyboards or screen readers.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Skip Link</h2>
+            <div class="skip-demo">
+                <a href="#main-content" class="skip-link">Skip to main content</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Multiple Skip Links</h2>
+            <div class="multiple-skip-demo">
+                <nav class="skip-nav">
+                    <a href="#main-content" class="skip-link">Skip to main content</a>
+                    <a href="#navigation" class="skip-link">Skip to navigation</a>
+                    <a href="#footer" class="skip-link">Skip to footer</a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skip Link Implementation</h2>
+            <div class="implementation-demo">
+                <div class="impl-item">
+                    <h3>HTML Structure</h3>
+                    <code>&lt;a href="#main" class="skip-link"&gt;Skip to main&lt;/a&gt;</code>
+                </div>
+                <div class="impl-item">
+                    <h3>CSS Styling</h3>
+                    <code>.skip-link { position: absolute; top: -40px; }</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Best Practices</h2>
+            <div class="practices-demo">
+                <div class="practice-item">
+                    <h3>✅ Visible on Focus</h3>
+                    <p>Skip links should be visible when focused</p>
+                </div>
+                <div class="practice-item">
+                    <h3>✅ First in Tab Order</h3>
+                    <p>Place skip links at the beginning of the page</p>
+                </div>
+                <div class="practice-item">
+                    <h3>✅ Clear Labels</h3>
+                    <p>Use clear, descriptive link text</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Implement skip links! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Skip to main content link</li>
+                    <li>Multiple skip links for different sections</li>
+                    <li>Accessible skip link styling</li>
+                    <li>Test skip links with keyboard navigation</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

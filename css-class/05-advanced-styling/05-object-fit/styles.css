@@ -1,0 +1,378 @@
+/* Object-fit and Object-position - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+/* Object-fit Grid */
+.fit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.fit-item {
+    text-align: center;
+}
+
+.fit-container {
+    width: 100%;
+    height: 200px;
+    background: #e9ecef;
+    border: 2px dashed #667eea;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fit-demo {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.fill {
+    object-fit: fill;
+    /* Stretches to fill */
+}
+
+.contain {
+    object-fit: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cover {
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.none {
+    object-fit: none;
+    background-size: 150px 150px;
+    background-position: center;
+}
+
+.scale-down {
+    object-fit: scale-down;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fit-item p {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Image Examples */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.image-item {
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    background: #e9ecef;
+    border: 2px dashed #667eea;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.image-demo {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background-size: 150px 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-fill {
+    object-fit: fill;
+    background-size: 100% 100%;
+}
+
+.img-contain {
+    object-fit: contain;
+    background-size: contain;
+}
+
+.img-cover {
+    object-fit: cover;
+    background-size: cover;
+}
+
+.img-none {
+    object-fit: none;
+    background-size: 150px 150px;
+}
+
+.image-item p {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Object-position */
+.position-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.position-item {
+    text-align: center;
+}
+
+.position-container {
+    width: 100%;
+    height: 200px;
+    background: #e9ecef;
+    border: 2px dashed #667eea;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.position-demo {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background-size: 120px 120px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.pos-center {
+    object-position: center;
+    background-position: center;
+}
+
+.pos-top {
+    object-position: top;
+    background-position: top center;
+}
+
+.pos-bottom {
+    object-position: bottom;
+    background-position: bottom center;
+}
+
+.pos-left {
+    object-position: left;
+    background-position: left center;
+}
+
+.pos-right {
+    object-position: right;
+    background-position: right center;
+}
+
+.pos-custom {
+    object-position: 25% 75%;
+    background-position: 25% 75%;
+}
+
+.position-item p {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Real-World Examples */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.example-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.example-card h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.profile-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #667eea;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e9ecef;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e9ecef;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    object-fit: cover;
+    object-position: center top;
+    background-size: cover;
+    background-position: center top;
+}
+
+.example-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fit-grid,
+    .image-grid,
+    .position-grid,
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}

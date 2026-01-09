@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakpoints - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding Breakpoints</h1>
+        
+        <section class="info-section">
+            <h2>What are Breakpoints?</h2>
+            <p>Breakpoints are specific screen widths where your responsive design adapts. They're essential for creating layouts that work across different devices.</p>
+        </section>
+
+        <section class="breakpoints-section">
+            <h2>Common Breakpoints</h2>
+            <div class="breakpoints-grid">
+                <div class="breakpoint-card">
+                    <h3>XS (Extra Small)</h3>
+                    <p class="size">0px - 479px</p>
+                    <p>Phones</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>SM (Small)</h3>
+                    <p class="size">480px - 767px</p>
+                    <p>Large phones, tablets</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>MD (Medium)</h3>
+                    <p class="size">768px - 1023px</p>
+                    <p>Tablets</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>LG (Large)</h3>
+                    <p class="size">1024px - 1279px</p>
+                    <p>Small desktops</p>
+                </div>
+                <div class="breakpoint-card">
+                    <h3>XL (Extra Large)</h3>
+                    <p class="size">1280px+</p>
+                    <p>Large desktops</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="responsive-demo">
+            <h2>Responsive Layout Example</h2>
+            <div class="responsive-container">
+                <div class="responsive-item">Box 1</div>
+                <div class="responsive-item">Box 2</div>
+                <div class="responsive-item">Box 3</div>
+                <div class="responsive-item">Box 4</div>
+            </div>
+            <p class="demo-note">Resize window to see layout change at breakpoints</p>
+        </section>
+
+        <section class="media-query-example">
+            <h2>Media Query Examples</h2>
+            <div class="code-example">
+                <h3>Mobile First Approach</h3>
+                <pre>/* Mobile (XS) - Default */
+.container { width: 100%; }
+
+/* Tablet (MD) */
+@media (min-width: 768px) {
+    .container { width: 90%; }
+}
+
+/* Desktop (LG) */
+@media (min-width: 1024px) {
+    .container { max-width: 1000px; }
+}</pre>
+            </div>
+        </section>
+
+        <section class="testing-section">
+            <h2>Testing Breakpoints</h2>
+            <div class="test-methods">
+                <div class="method">
+                    <h3>Browser DevTools</h3>
+                    <p>Use Chrome DevTools to simulate different screen sizes</p>
+                </div>
+                <div class="method">
+                    <h3>Real Devices</h3>
+                    <p>Test on actual phones, tablets, and monitors</p>
+                </div>
+                <div class="method">
+                    <h3>Analytics</h3>
+                    <p>Check your audience's actual device sizes</p>
+                </div>
+                <div class="method">
+                    <h3>Responsive Viewers</h3>
+                    <p>Use online responsive design testing tools</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <h2>Best Practices</h2>
+            <ul class="practices-list">
+                <li>Start with mobile-first design</li>
+                <li>Use min-width for progressive enhancement</li>
+                <li>Keep breakpoints consistent</li>
+                <li>Test on real devices, not just browser</li>
+                <li>Keep 3-5 main breakpoints</li>
+                <li>Document your breakpoint strategy</li>
+                <li>Base breakpoints on content, not devices</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

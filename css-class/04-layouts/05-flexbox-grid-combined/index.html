@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combining Flexbox and Grid - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Combining Flexbox and Grid</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Flexbox and Grid work together perfectly! Use <strong>Grid for page layouts</strong> (two-dimensional) and <strong>Flexbox for components</strong> (one-dimensional). Combining them gives you the best of both worlds.</p>
+        </section>
+
+        <section class="section">
+            <h2>Grid Container with Flexbox Items</h2>
+            <div class="grid-flex-demo">
+                <div class="grid-container">
+                    <div class="flex-item">
+                        <h4>Card Title</h4>
+                        <p>Content</p>
+                        <button>Action</button>
+                    </div>
+                    <div class="flex-item">
+                        <h4>Card Title</h4>
+                        <p>Content</p>
+                        <button>Action</button>
+                    </div>
+                    <div class="flex-item">
+                        <h4>Card Title</h4>
+                        <p>Content</p>
+                        <button>Action</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Flexbox Container with Grid Items</h2>
+            <div class="flex-grid-demo">
+                <div class="flex-container">
+                    <div class="grid-item">
+                        <div class="grid-inner">Grid 1</div>
+                        <div class="grid-inner">Grid 2</div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-inner">Grid 1</div>
+                        <div class="grid-inner">Grid 2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Page Layout: Grid with Flexbox Components</h2>
+            <div class="page-layout-demo">
+                <div class="page-grid">
+                    <header class="page-header">
+                        <div class="header-content">
+                            <div class="logo">Logo</div>
+                            <nav class="nav-flex">
+                                <a href="#">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Contact</a>
+                            </nav>
+                        </div>
+                    </header>
+                    <aside class="page-sidebar">
+                        <div class="sidebar-content">
+                            <h4>Sidebar</h4>
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <main class="page-main">
+                        <div class="main-content">
+                            <h3>Main Content</h3>
+                            <div class="card-grid">
+                                <div class="card-flex">
+                                    <h4>Card 1</h4>
+                                    <p>Content</p>
+                                    <button>Action</button>
+                                </div>
+                                <div class="card-flex">
+                                    <h4>Card 2</h4>
+                                    <p>Content</p>
+                                    <button>Action</button>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="page-footer">
+                        <div class="footer-content">
+                            <p>Footer Content</p>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Card Layout: Grid Container, Flexbox Cards</h2>
+            <div class="card-layout-demo">
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Card Title</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Card content goes here. This card uses flexbox internally while being part of a grid layout.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button>Action 1</button>
+                            <button>Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Card Title</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Card content goes here. This card uses flexbox internally while being part of a grid layout.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button>Action 1</button>
+                            <button>Action 2</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Card Title</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Card content goes here. This card uses flexbox internally while being part of a grid layout.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button>Action 1</button>
+                            <button>Action 2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Form Layout: Grid Container, Flexbox Form Groups</h2>
+            <form class="form-layout-demo">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Email</label>
+                        <input type="email">
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Message</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="form-actions full-width">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with combining Flexbox and Grid! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A page layout using Grid with Flexbox components</li>
+                    <li>A card grid where each card uses Flexbox internally</li>
+                    <li>A dashboard with Grid layout and Flexbox widgets</li>
+                    <li>A responsive layout combining both techniques</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

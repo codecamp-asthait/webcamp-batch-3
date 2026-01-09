@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cascade Layers (@layer) - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Cascade Layers</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS Cascade Layers (<code>@layer</code>) allow you to control the cascade order of CSS rules explicitly. This helps manage specificity conflicts and organize styles from different sources (frameworks, components, utilities) in a predictable way.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Layer Declaration</h2>
+            <div class="layer-demo">
+                <div class="demo-box layer-example">
+                    <p>This box demonstrates cascade layers</p>
+                </div>
+            </div>
+            <p class="explanation">Layers are defined in order, and later layers have higher priority.</p>
+        </section>
+
+        <section class="section">
+            <h2>Layer Order Example</h2>
+            <div class="order-demo">
+                <div class="order-box base">Base Layer</div>
+                <div class="order-box component">Component Layer</div>
+                <div class="order-box utility">Utility Layer</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Nested Layers</h2>
+            <div class="nested-demo">
+                <div class="nested-box">Nested Layer Example</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Layer Import</h2>
+            <div class="import-demo">
+                <div class="import-box">Imported Layer Styles</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Unlayered vs Layered</h2>
+            <div class="comparison-demo">
+                <div class="comparison-box unlayered">Unlayered Styles</div>
+                <div class="comparison-box layered">Layered Styles</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with cascade layers! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A layer structure for base, components, and utilities</li>
+                    <li>Organize framework styles in separate layers</li>
+                    <li>Create nested layers for complex projects</li>
+                    <li>Manage specificity conflicts using layers</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

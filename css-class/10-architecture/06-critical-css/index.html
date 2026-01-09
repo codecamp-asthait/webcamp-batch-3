@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical CSS - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Critical CSS</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Critical CSS is the CSS needed to render the above-the-fold content. Inlining critical CSS reduces render-blocking and improves initial page load performance, leading to faster First Contentful Paint (FCP).</p>
+        </section>
+
+        <section class="section">
+            <h2>Critical CSS Strategy</h2>
+            <div class="strategy-demo">
+                <div class="strategy-item">
+                    <h3>1. Identify</h3>
+                    <p>Identify above-the-fold styles</p>
+                </div>
+                <div class="strategy-item">
+                    <h3>2. Extract</h3>
+                    <p>Extract critical CSS</p>
+                </div>
+                <div class="strategy-item">
+                    <h3>3. Inline</h3>
+                    <p>Inline in &lt;head&gt;</p>
+                </div>
+                <div class="strategy-item">
+                    <h3>4. Defer</h3>
+                    <p>Defer non-critical CSS</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Implementation</h2>
+            <div class="implementation-demo">
+                <div class="impl-item">
+                    <h3>Inline Critical CSS</h3>
+                    <code>&lt;style&gt;/* Critical CSS */&lt;/style&gt;</code>
+                </div>
+                <div class="impl-item">
+                    <h3>Defer Non-Critical</h3>
+                    <code>&lt;link rel="preload" href="styles.css"&gt;</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Implement critical CSS! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Extract critical CSS for your pages</li>
+                    <li>Inline critical CSS in HTML</li>
+                    <li>Defer non-critical CSS loading</li>
+                    <li>Measure performance improvements</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

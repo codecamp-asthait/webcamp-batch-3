@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Reader Only Content - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Screen Reader Only Content</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Screen reader only content is text that is accessible to screen readers but visually hidden. This technique is essential for providing additional context, labels, and instructions to users who rely on assistive technologies.</p>
+        </section>
+
+        <section class="section">
+            <h2>Screen Reader Only Class</h2>
+            <div class="sr-demo">
+                <button class="sr-button">
+                    <span class="sr-only">Close dialog</span>
+                    <span aria-hidden="true">×</span>
+                </button>
+                <p class="sr-text">This button has screen reader text that's hidden visually.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skip Links</h2>
+            <div class="skip-demo">
+                <a href="#main-content" class="skip-link">Skip to main content</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Form Labels</h2>
+            <div class="form-demo">
+                <form>
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" placeholder="Enter password">
+                </form>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contextual Information</h2>
+            <div class="context-demo">
+                <button class="context-button">
+                    Download
+                    <span class="sr-only">PDF file, 2.5 MB</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Create screen reader only content! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Screen reader only class</li>
+                    <li>Hidden labels for form inputs</li>
+                    <li>Contextual information for screen readers</li>
+                    <li>Skip links for navigation</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

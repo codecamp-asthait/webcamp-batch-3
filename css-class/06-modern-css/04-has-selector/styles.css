@@ -1,0 +1,349 @@
+/* CSS :has() Selector - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3, h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+/* Basic :has() Examples */
+.has-demo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Style card if it has an image */
+.card:has(img) {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.card:has(img) h3 {
+    color: #667eea;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+/* Style card if it has a button */
+.card:has(button) {
+    border-color: #f093fb;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+}
+
+.card:has(button) button {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.card:has(button) button:hover {
+    transform: translateY(-2px);
+}
+
+/* Form Validation Styling */
+.form-demo {
+    margin-top: 20px;
+}
+
+.demo-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+/* Style form group if input is valid */
+.form-group:has(input:valid) {
+    color: #28a745;
+}
+
+.form-group:has(input:valid) input {
+    border-color: #28a745;
+}
+
+/* Style form group if input is invalid */
+.form-group:has(input:invalid) {
+    color: #dc3545;
+}
+
+.form-group:has(input:invalid) input {
+    border-color: #dc3545;
+}
+
+/* Card Layout Variations */
+.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.layout-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Card with image - different layout */
+.layout-card:has(.card-image) {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-card:has(.card-image) .card-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.layout-card:has(.card-image) .card-content {
+    padding: 20px;
+}
+
+/* Card without image - different layout */
+.layout-card:not(:has(.card-image)) {
+    padding: 30px;
+}
+
+.layout-card:not(:has(.card-image)) .card-content h4 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.card-content h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Navigation with Active Items */
+.nav-demo {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.nav-demo ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-demo li {
+    position: relative;
+}
+
+.nav-demo a {
+    display: block;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #666;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-demo a:hover {
+    background: #f8f9fa;
+    color: #667eea;
+}
+
+/* Style parent li if it has active child */
+.nav-demo li:has(.active) a {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    font-weight: bold;
+}
+
+/* Conditional Grid Layouts */
+.conditional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.grid-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Style grid item if it has a button */
+.grid-item:has(button) {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.grid-item:has(button) button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.grid-item:has(button) button:hover {
+    transform: translateY(-2px);
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .has-demo-grid,
+    .layout-grid,
+    .conditional-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-demo ul {
+        flex-direction: column;
+    }
+}

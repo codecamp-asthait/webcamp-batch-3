@@ -1,0 +1,250 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #764ba2;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Text Properties Examples */
+.text-demo-1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.text-demo-2 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+.text-demo-3 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-style: italic;
+    color: #27ae60;
+}
+
+/* Spacing Properties Examples */
+.box-demo {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.margin-demo {
+    margin: 30px 0;
+    margin-left: 50px;
+}
+
+.padding-demo {
+    padding: 30px;
+    background: #e67e22;
+}
+
+/* Border Properties Examples */
+.border-demo-1,
+.border-demo-2,
+.border-demo-3,
+.border-demo-4 {
+    padding: 15px;
+    margin: 15px 0;
+    background: #ecf0f1;
+}
+
+.border-demo-1 {
+    border: 2px solid #3498db;
+}
+
+.border-demo-2 {
+    border: 3px dashed #e74c3c;
+}
+
+.border-demo-3 {
+    border: 4px solid #2ecc71;
+    border-radius: 15px;
+}
+
+.border-demo-4 {
+    border: 5px double #9b59b6;
+}
+
+/* Width and Height Examples */
+.size-demo-1,
+.size-demo-2,
+.size-demo-3 {
+    background: #16a085;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.size-demo-1 {
+    width: 200px;
+}
+
+.size-demo-2 {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.size-demo-3 {
+    max-width: 400px;
+}
+
+/* Display Types Examples */
+.display-demos {
+    background: white;
+    padding: 20px;
+}
+
+.display-block {
+    display: block;
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.display-inline {
+    display: inline;
+    background: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
+.display-inline-block {
+    display: inline-block;
+    background: #2ecc71;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+/* Opacity Examples */
+.opacity-demo-1,
+.opacity-demo-2,
+.opacity-demo-3 {
+    background: #e74c3c;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.opacity-demo-1 {
+    opacity: 1;
+}
+
+.opacity-demo-2 {
+    opacity: 0.5;
+}
+
+.opacity-demo-3 {
+    opacity: 0.2;
+}
+
+/* Cursor Examples */
+.cursor-demos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cursor-demos button,
+.cursor-demos span {
+    padding: 10px 20px;
+    background: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.cursor-text {
+    cursor: text;
+    background: #16a085;
+}
+
+.cursor-help {
+    cursor: help;
+    background: #d35400;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 20px;
+    margin-top: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    min-height: 100px;
+}
+
+/* Hover Effects */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

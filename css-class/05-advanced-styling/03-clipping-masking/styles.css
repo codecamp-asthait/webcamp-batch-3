@@ -1,0 +1,336 @@
+/* CSS Clipping and Masking - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+/* Basic Clip Path Grid */
+.clip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.clip-item {
+    text-align: center;
+}
+
+.clip-demo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 200px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+.clip-circle {
+    clip-path: circle(50%);
+}
+
+.clip-ellipse {
+    clip-path: ellipse(60% 40% at 50% 50%);
+}
+
+.clip-polygon {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.clip-inset {
+    clip-path: inset(20%);
+}
+
+.clip-item p {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* Advanced Clip Path */
+.advanced-clip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.advanced-clip {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+.star-clip {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.arrow-clip {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+.hexagon-clip {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.speech-clip {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+/* Animated Clip Path */
+.animation-demo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.animated-clip {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    clip-path: circle(50%);
+    transition: clip-path 0.5s ease;
+    cursor: pointer;
+}
+
+.animated-clip:hover {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Masking */
+.mask-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.mask-demo {
+    height: 200px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mask-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.mask-gradient {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.mask-gradient .mask-content {
+    mask: linear-gradient(to bottom, transparent, black);
+    -webkit-mask: linear-gradient(to bottom, transparent, black);
+}
+
+.mask-radial {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.mask-radial .mask-content {
+    mask: radial-gradient(circle, black 40%, transparent 70%);
+    -webkit-mask: radial-gradient(circle, black 40%, transparent 70%);
+}
+
+.mask-image {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.mask-image .mask-content {
+    mask: linear-gradient(45deg, transparent 30%, black 50%, transparent 70%);
+    -webkit-mask: linear-gradient(45deg, transparent 30%, black 50%, transparent 70%);
+}
+
+/* Text Clipping */
+.text-clip-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-clip-bg {
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 20px 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 80%);
+}
+
+.text-clip-shape {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 20px 0;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+}
+
+/* Image Effects */
+.image-effects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.image-effect {
+    height: 250px;
+    border-radius: 8px;
+    position: relative;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.effect-label {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.effect-1 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.effect-2 {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.effect-3 {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .clip-grid,
+    .advanced-clip-grid,
+    .mask-grid,
+    .image-effects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-clip-bg {
+        font-size: 2.5em;
+    }
+    
+    .text-clip-shape {
+        font-size: 2em;
+    }
+}

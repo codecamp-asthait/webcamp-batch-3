@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors - Basic CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Selectors</h1>
+        
+        <section class="topic">
+            <h2>1. Element Selector</h2>
+            <p>This paragraph is styled using element selector.</p>
+            <div>This div is also styled with element selector.</div>
+        </section>
+
+        <section class="topic">
+            <h2>2. Class Selector</h2>
+            <p class="highlight">This paragraph has a class "highlight".</p>
+            <p class="highlight">This paragraph also has the same class.</p>
+            <p>This paragraph doesn't have the class.</p>
+        </section>
+
+        <section class="topic">
+            <h2>3. ID Selector</h2>
+            <p id="unique">This paragraph has an ID "unique". IDs should be unique!</p>
+        </section>
+
+        <section class="topic">
+            <h2>4. Descendant Selector</h2>
+            <div class="parent">
+                <p>This paragraph is inside .parent div.</p>
+                <div>
+                    <p>This paragraph is inside p2</p>
+                </div>
+                <span>This span is also inside .parent div.</span>
+            </div>
+            <p>This paragraph is outside .parent div.</p>
+        </section>
+
+        <section class="topic">
+            <h2>5. Child Selector</h2>
+            <div class="parent-direct">
+                <p>Direct child paragraph.</p>
+                <div>
+                    <p>Nested paragraph (not a direct child).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="topic">
+            <h2>6. Multiple Selectors</h2>
+            <p class="red">Red text</p>
+            <p class="large">Large text</p>
+            <p class="red large">Red and large text</p>
+        </section>
+
+        <section class="topic">
+            <h2>7. Attribute Selector</h2>
+            <a href="https://example.com">External link</a>
+            <a href="#section">Internal link</a>
+            <input type="text" placeholder="Text input">
+            <input type="email" placeholder="Email input">
+            <input type="password" placeholder="Password input">
+        </section>
+
+        <section class="topic">
+            <h2>8. Universal Selector</h2>
+            <div class="reset-box">
+                <p>All elements in this box have margin reset.</p>
+                <span>This span too!</span>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+

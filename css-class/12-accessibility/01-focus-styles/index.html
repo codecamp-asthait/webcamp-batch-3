@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Styles and :focus-visible - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Focus Styles and :focus-visible</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Focus styles are essential for keyboard navigation accessibility. The <code>:focus-visible</code> pseudo-class allows you to show focus indicators only when the user is navigating with a keyboard, providing a better experience for both keyboard and mouse users.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic :focus</h2>
+            <div class="focus-demo">
+                <button class="focus-basic">Basic Focus</button>
+                <input type="text" placeholder="Text input" class="focus-basic">
+                <a href="#" class="focus-basic">Link with Focus</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>:focus-visible</h2>
+            <div class="focus-demo">
+                <button class="focus-visible-btn">Focus Visible (Keyboard Only)</button>
+                <input type="text" placeholder="Text input" class="focus-visible-input">
+                <a href="#" class="focus-visible-link">Link with Focus Visible</a>
+            </div>
+            <p class="info">Try clicking with mouse vs tabbing with keyboard to see the difference.</p>
+        </section>
+
+        <section class="section">
+            <h2>Custom Focus Styles</h2>
+            <div class="focus-demo">
+                <button class="focus-custom">Custom Focus Ring</button>
+                <button class="focus-outline">Outline Focus</button>
+                <button class="focus-glow">Glow Focus</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Focus Within</h2>
+            <div class="focus-within-demo">
+                <form class="focus-form">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter name">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter email">
+                </form>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Removing Default Focus</h2>
+            <div class="focus-demo">
+                <button class="no-focus">No Focus (Bad Practice)</button>
+                <button class="no-focus-good">No Focus, But Accessible</button>
+            </div>
+            <p class="warning">⚠️ Never remove focus styles without providing alternatives!</p>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with focus styles! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Custom focus indicators for buttons</li>
+                    <li>Focus styles that work with :focus-visible</li>
+                    <li>Accessible form focus styles</li>
+                    <li>Focus styles that meet WCAG guidelines</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

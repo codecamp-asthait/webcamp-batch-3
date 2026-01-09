@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Display Property</h1>
+        
+        <section class="section">
+            <h2>Display: Block</h2>
+            <div class="demo-box">
+                <span class="block-demo">Block Element 1</span>
+                <span class="block-demo">Block Element 2</span>
+                <span class="block-demo">Block Element 3</span>
+            </div>
+            <p class="info">Block elements take up the full width and start on new lines.</p>
+        </section>
+
+        <section class="section">
+            <h2>Display: Inline</h2>
+            <div class="demo-box">
+                <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+                <span class="inline-demo">Inline 3</span>
+                <span class="inline-demo">Inline 4</span>
+                <span class="inline-demo">Inline 4</span>
+                 <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+                <span class="inline-demo">Inline 3</span>
+                <span class="inline-demo">Inline 4</span>
+                <span class="inline-demo">Inline 4</span> <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+                <span class="inline-demo">Inline 3</span>
+                <span class="inline-demo">Inline 4</span>
+                <span class="inline-demo">Inline 4</span> <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+                <span class="inline-demo">Inline 3</span>
+                <span class="inline-demo">Inline 4</span>
+                <span class="inline-demo">Inline 4</span> <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+                <span class="inline-demo">Inline 3</span>
+                <span class="inline-demo">Inline 4</span>
+                <span class="inline-demo">Inline 4</span> <span class="inline-demo">Inline 1</span>
+                <span class="inline-demo">Inline 2</span>
+                <span class="inline-demo">Inline 3</span>
+                <span class="inline-demo">Inline 4</span>
+                <span class="inline-demo">Inline 4</span>
+            </div>
+            <p class="info">Inline elements flow within text and don't break lines.</p>
+        </section>
+
+        <section class="section">
+            <h2>Display: Inline-Block</h2>
+            <div class="demo-box">
+                <span class="inline-block-demo">Item 1</span>
+                <span class="inline-block-demo">Item 2</span>
+                <span class="inline-block-demo">Item 3</span>
+                <span class="inline-block-demo">Item 4</span>
+                
+            </div>
+            <p class="info">Inline-block elements flow inline but respect width and height.</p>
+        </section>
+
+        <section class="section">
+            <h2>Display: None vs Visibility</h2>
+            <div class="visibility-demo">
+                <div class="box visible">Visible</div>
+                <div class="box display-none">Display: None</div>
+                <div class="box visible">Visible</div>
+            </div>
+            <div class="visibility-demo" style="margin-top: 20px;">
+                <div class="box visible">Visible</div>
+                <div class="box visibility-hidden">Visibility: Hidden</div>
+                <div class="box visible">Visible</div>
+            </div>
+            <p class="info">display: none removes space, visibility: hidden keeps space.</p>
+        </section>
+
+        <section class="section">
+            <h2>Display: Flex</h2>
+            <div class="flex-demo">
+                <div class="flex-item">Flex 1</div>
+                <div class="flex-item">Flex 2</div>
+                <div class="flex-item">Flex 3</div>
+                <div class="flex-item">Flex 4</div>
+            </div>
+            <p class="info">Flexbox allows flexible one-dimensional layouts.</p>
+        </section>
+
+        <section class="section">
+            <h2>Display: Grid</h2>
+            <div class="grid-demo">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <div class="grid-item">5</div>
+                <div class="grid-item">6</div>
+            </div>
+            <p class="info">Grid allows two-dimensional layouts with rows and columns.</p>
+        </section>
+
+        <section class="section">
+            <h2>Real-World: Navigation Bar</h2>
+            <nav class="navbar">
+                <div class="nav-brand">Logo</div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Services</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="section">
+            <h2>Real-World: Button Group</h2>
+            <div class="button-group">
+                <button class="btn">Save</button>
+                <button class="btn">Cancel</button>
+                <button class="btn">Delete</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Display: Contents</h2>
+            <div class="contents-demo">
+                <div class="wrapper">
+                    <div>Item 1</div>
+                    <div class="contents-box">
+                        <div>Item 2 (in contents)</div>
+                        <div>Item 3 (in contents)</div>
+                    </div>
+                    <div>Item 4</div>
+                </div>
+            </div>
+            <p class="info">display: contents makes the element's children act as direct children of the grandparent.</p>
+        </section>
+
+        <section class="section practice">
+            <h2>Interactive Toggle</h2>
+            <button class="toggle-btn" onclick="toggleVisibility()">Toggle Display</button>
+            <div class="toggle-target" id="toggleTarget">
+                <p>This element can be toggled!</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleVisibility() {
+            const element = document.getElementById('toggleTarget');
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

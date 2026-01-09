@@ -1,0 +1,358 @@
+/* CSS Scroll Snap - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Horizontal Scroll Snap */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.horizontal-scroll .scroll-item {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Vertical Scroll Snap */
+.vertical-scroll {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    height: 400px;
+    gap: 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.vertical-scroll .scroll-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* Scroll Items */
+.scroll-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.item-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.item-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.item-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.item-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.item-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+
+/* Scroll Snap Types */
+.snap-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.snap-type-demo {
+    text-align: center;
+}
+
+.snap-type-demo h3 {
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.snap-mandatory {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.snap-mandatory .scroll-item {
+    flex: 0 0 200px;
+    scroll-snap-align: start;
+    min-height: 150px;
+    font-size: 2em;
+}
+
+.snap-proximity {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    gap: 10px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.snap-proximity .scroll-item {
+    flex: 0 0 200px;
+    scroll-snap-align: start;
+    min-height: 150px;
+    font-size: 2em;
+}
+
+/* Scroll Snap Alignment */
+.alignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.alignment-demo {
+    text-align: center;
+}
+
+.alignment-demo h3 {
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.align-start {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.align-start .scroll-item {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    min-height: 150px;
+}
+
+.align-center {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.align-center .scroll-item {
+    flex: 0 0 250px;
+    scroll-snap-align: center;
+    min-height: 150px;
+}
+
+.align-end {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 15px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.align-end .scroll-item {
+    flex: 0 0 250px;
+    scroll-snap-align: end;
+    min-height: 150px;
+}
+
+/* Image Gallery */
+.gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.gallery-item {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.img-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.img-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.img-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.img-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+
+.gallery-item p {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Card Carousel */
+.card-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card {
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Hide scrollbar for cleaner look */
+.horizontal-scroll::-webkit-scrollbar,
+.vertical-scroll::-webkit-scrollbar,
+.snap-mandatory::-webkit-scrollbar,
+.snap-proximity::-webkit-scrollbar,
+.align-start::-webkit-scrollbar,
+.align-center::-webkit-scrollbar,
+.align-end::-webkit-scrollbar,
+.gallery-scroll::-webkit-scrollbar,
+.card-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track,
+.vertical-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb,
+.vertical-scroll::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .snap-types-grid,
+    .alignment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .horizontal-scroll .scroll-item,
+    .gallery-item,
+    .card {
+        flex: 0 0 85%;
+    }
+}

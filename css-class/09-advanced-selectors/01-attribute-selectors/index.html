@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Attribute Selectors - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Attribute Selectors</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>Attribute selectors allow you to select elements based on their attributes and attribute values. Advanced attribute selectors provide powerful ways to target elements with specific attribute patterns, making CSS more flexible and maintainable.</p>
+        </section>
+
+        <section class="section">
+            <h2>Exact Match</h2>
+            <div class="selector-demo">
+                <input type="text" value="Text input" class="exact-match">
+                <input type="email" value="email@example.com" class="exact-match">
+                <input type="password" value="password" class="exact-match">
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Begins With (^=)</h2>
+            <div class="selector-demo">
+                <a href="https://example.com" class="begins-with">https://example.com</a>
+                <a href="https://google.com" class="begins-with">https://google.com</a>
+                <a href="http://example.org" class="begins-with">http://example.org</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Ends With ($=)</h2>
+            <div class="selector-demo">
+                <a href="image.jpg" class="ends-with">image.jpg</a>
+                <a href="document.pdf" class="ends-with">document.pdf</a>
+                <a href="file.png" class="ends-with">file.png</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contains (*=)</h2>
+            <div class="selector-demo">
+                <div class="contains-demo" data-info="important">Contains "important"</div>
+                <div class="contains-demo" data-info="not-important">Doesn't contain</div>
+                <div class="contains-demo" data-info="very-important">Contains "important"</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Word Match (~=)</h2>
+            <div class="selector-demo">
+                <div class="word-match" data-class="button primary">Word Match</div>
+                <div class="word-match" data-class="button secondary">Word Match</div>
+                <div class="word-match" data-class="link primary">Word Match</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Starts With (|=)</h2>
+            <div class="selector-demo">
+                <div class="starts-with" lang="en-US">en-US</div>
+                <div class="starts-with" lang="en-GB">en-GB</div>
+                <div class="starts-with" lang="fr-FR">fr-FR</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with attribute selectors! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Selectors for specific input types</li>
+                    <li>Styling external vs internal links</li>
+                    <li>Targeting elements by data attributes</li>
+                    <li>Complex attribute selector combinations</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

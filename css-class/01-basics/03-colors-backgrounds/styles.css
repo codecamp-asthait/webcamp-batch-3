@@ -1,0 +1,244 @@
+/* Colors and Backgrounds */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.topic {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #3498db;
+}
+
+/* 1. Color Values */
+.color-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.color-box {
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    min-width: 150px;
+    flex: 1;
+}
+
+.named {
+    background-color: red;
+}
+
+.hex {
+    background-color: #3498db;
+}
+
+.rgb {
+    background-color: rgb(46, 204, 113);
+}
+
+.rgba {
+    background-color: rgba(231, 76, 60, 0.8);
+}
+
+.hsl {
+    background-color: hsl(280, 50%, 50%);
+}
+
+/* 2. Background Color */
+.bg-color-1 {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.bg-color-2 {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.bg-color-3 {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* 3. Background Image */
+.bg-image {
+    background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    height: 150px;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 4. Background Properties */
+.bg-repeat {
+    background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+                      linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+                      linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+                      linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.bg-no-repeat {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-cover {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-contain {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #3498db;
+}
+
+.bg-position {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 100px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+/* 5. Background Shorthand */
+.bg-shorthand {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) center/cover no-repeat;
+    height: 120px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* 6. Opacity */
+.opacity-examples {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.opacity-examples > div {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-25 {
+    opacity: 0;
+}
+
+
+/* Angle map
+Angle	Direction of gradient line
+0deg	Bottom → Top
+90deg	Left → Right
+180deg	Top → Bottom
+270deg	Right → Left
+360deg	Same as 0deg */
+

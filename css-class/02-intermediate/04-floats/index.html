@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats and Clearing - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Floats and Clearing</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>The <code>float</code> property was originally designed for wrapping text around images, but it became a popular layout technique before Flexbox and Grid. The <code>clear</code> property prevents elements from floating next to floated elements.</p>
+            <p class="note"><strong>Note:</strong> While modern layouts use Flexbox and Grid, understanding floats is important for legacy code and specific use cases like text wrapping around images.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Float Values</h2>
+            <div class="float-demo">
+                <div class="float-box float-left">Float Left</div>
+                <p>This text wraps around the floated element. The float property removes the element from the normal document flow and positions it to the left or right of its container. Text and inline elements will wrap around it.</p>
+            </div>
+            
+            <div class="float-demo">
+                <div class="float-box float-right">Float Right</div>
+                <p>This text wraps around the floated element on the right side. Notice how the text flows around the floated box. This is the original purpose of floats - to allow text to wrap around images or other content.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Image with Text Wrapping</h2>
+            <div class="image-wrap-demo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20'%3EImage%3C/text%3E%3C/svg%3E" alt="Demo Image" class="wrapped-image">
+                <p>This is a practical example of using float to wrap text around an image. The image is floated to the left, and the text flows around it naturally. This is one of the most common and appropriate uses of the float property today.</p>
+                <p>You can see how the text continues to wrap around the image, creating a magazine-style layout. This technique is still widely used for article layouts and content with images.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>The Clear Property</h2>
+            <div class="clear-demo">
+                <div class="float-box float-left">Float Left</div>
+                <p class="no-clear">This paragraph doesn't clear the float, so it wraps around.</p>
+                <p class="with-clear">This paragraph clears the float, so it appears below the floated element.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Clear Values</h2>
+            <div class="clear-values-demo">
+                <div class="float-left-box">Float Left</div>
+                <div class="float-right-box">Float Right</div>
+                <div class="clear-left">Clear Left</div>
+                <div class="clear-right">Clear Right</div>
+                <div class="clear-both">Clear Both</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Float Layout (Legacy Technique)</h2>
+            <div class="float-layout">
+                <header class="float-header">Header</header>
+                <aside class="float-sidebar">Sidebar</aside>
+                <main class="float-main">Main Content Area - This demonstrates how floats were used for layouts before Flexbox and Grid. While this works, modern CSS Grid or Flexbox is preferred for layout purposes.</main>
+                <footer class="float-footer">Footer</footer>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Clearing Floats - Clearfix Technique</h2>
+            <div class="clearfix-demo">
+                <div class="float-item">Item 1</div>
+                <div class="float-item">Item 2</div>
+                <div class="float-item">Item 3</div>
+                <!-- Clearfix prevents container collapse -->
+            </div>
+            <p class="clearfix-explanation">The clearfix technique prevents the container from collapsing when all children are floated.</p>
+        </section>
+
+        <section class="section">
+            <h2>Multiple Floated Elements</h2>
+            <div class="multi-float-demo">
+                <div class="multi-float">Box 1</div>
+                <div class="multi-float">Box 2</div>
+                <div class="multi-float">Box 3</div>
+                <div class="multi-float">Box 4</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with floats and clearing! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Text wrapping around an image</li>
+                    <li>A simple two-column layout using floats</li>
+                    <li>A clearfix solution for a container with floated children</li>
+                    <li>Multiple floated elements in a row</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

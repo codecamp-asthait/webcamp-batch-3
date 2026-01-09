@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container vs Media Queries - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Container Queries vs Media Queries</h1>
+        
+        <section class="intro-section">
+            <h2>The Evolution of Responsive Design</h2>
+            <p>Media queries respond to viewport size. Container queries respond to component size. They solve different problems.</p>
+        </section>
+
+        <section class="comparison-section">
+            <h2>Quick Comparison</h2>
+            <div class="comparison-table">
+                <div class="comparison-row header">
+                    <div class="cell">Aspect</div>
+                    <div class="cell">Media Queries</div>
+                    <div class="cell">Container Queries</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="cell">Responds to</div>
+                    <div class="cell">Viewport</div>
+                    <div class="cell">Container</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="cell">Best for</div>
+                    <div class="cell">Page Layout</div>
+                    <div class="cell">Components</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="cell">Reusability</div>
+                    <div class="cell">Limited</div>
+                    <div class="cell">Excellent</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="cell">Browser Support</div>
+                    <div class="cell">Universal</div>
+                    <div class="cell">Modern Only</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="media-query-section">
+            <h2>Media Queries: Viewport-Based</h2>
+            <p>Traditional approach - responds to browser window size:</p>
+            <div class="code-example">
+                <h3>Media Query Example</h3>
+                <pre>@media (min-width: 768px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}</pre>
+            </div>
+            <div class="media-demo">
+                <div class="media-card">
+                    <h3>Responsive Card</h3>
+                    <p>This card uses media queries to respond to viewport width.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-query-section">
+            <h2>Container Queries: Size-Based</h2>
+            <p>Modern approach - responds to parent container size:</p>
+            <div class="code-example">
+                <h3>Container Query Example</h3>
+                <pre>@container (min-width: 300px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}</pre>
+            </div>
+        </section>
+
+        <section class="use-cases-section">
+            <h2>When to Use Each</h2>
+            <div class="use-cases-grid">
+                <div class="use-case">
+                    <h3>Media Queries</h3>
+                    <ul class="use-case-list">
+                        <li>Page layout changes</li>
+                        <li>Global design adjustments</li>
+                        <li>Broad viewport adaptation</li>
+                        <li>Browser support critical</li>
+                    </ul>
+                </div>
+                <div class="use-case">
+                    <h3>Container Queries</h3>
+                    <ul class="use-case-list">
+                        <li>Component styling</li>
+                        <li>Reusable components</li>
+                        <li>Modular design</li>
+                        <li>Context independence</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="scenarios-section">
+            <h2>Real-World Scenarios</h2>
+            <div class="scenario">
+                <h3>Scenario: Sidebar + Main Content</h3>
+                <p>Same card component in two different widths:</p>
+                <div class="sidebar-demo">
+                    <div class="sidebar">
+                        <div class="sidebar-card">
+                            <h4>Sidebar Card</h4>
+                            <p>Narrow space</p>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="main-card">
+                            <h4>Main Content Card</h4>
+                            <p>Wide space</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="scenario-note">With container queries, both cards adapt to their actual available space.</p>
+            </div>
+        </section>
+
+        <section class="syntax-section">
+            <h2>Container Query Syntax</h2>
+            <div class="syntax-cards">
+                <div class="syntax-card">
+                    <h3>Container Type</h3>
+                    <p>Define container context:</p>
+                    <pre>.container {
+    container-type: inline-size;
+}</pre>
+                </div>
+                <div class="syntax-card">
+                    <h3>Named Container</h3>
+                    <p>Query specific containers:</p>
+                    <pre>@container page (min-width: 800px) {
+    .card { display: grid; }
+}</pre>
+                </div>
+                <div class="syntax-card">
+                    <h3>Container Units</h3>
+                    <p>Size relative to container:</p>
+                    <pre>.item {
+    width: 50cqw; /* 50% of width */
+    font-size: 2cqmin; /* 2% min dim */
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="browser-support-section">
+            <h2>Browser Support Status</h2>
+            <div class="support-grid">
+                <div class="support-item">
+                    <h4>Chrome/Edge</h4>
+                    <p class="support-version">105+</p>
+                    <span class="supported"></span>
+                </div>
+                <div class="support-item">
+                    <h4>Firefox</h4>
+                    <p class="support-version">Experimental</p>
+                    <span class="partial"></span>
+                </div>
+                <div class="support-item">
+                    <h4>Safari</h4>
+                    <p class="support-version">Experimental</p>
+                    <span class="partial"></span>
+                </div>
+                <div class="support-item">
+                    <h4>Mobile</h4>
+                    <p class="support-version">Limited</p>
+                    <span class="partial"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="fallback-section">
+            <h2>Progressive Enhancement</h2>
+            <div class="code-example">
+                <h3>Fallback Pattern</h3>
+                <pre>/* Default - works everywhere */
+.card { display: block; }
+
+/* Enhanced - modern browsers */
+@supports (container-type: inline-size) {
+    .container {
+        container-type: inline-size;
+    }
+    
+    @container (min-width: 400px) {
+        .card { display: grid; }
+    }
+}</pre>
+            </div>
+        </section>
+
+        <section class="migration-section">
+            <h2>Migration Strategy</h2>
+            <div class="strategy-cards">
+                <div class="strategy-card">
+                    <h3>For Existing Projects</h3>
+                    <ol class="strategy-list">
+                        <li>Keep media queries for pages</li>
+                        <li>Add container queries to components</li>
+                        <li>Test in supported browsers</li>
+                        <li>Provide fallbacks</li>
+                    </ol>
+                </div>
+                <div class="strategy-card">
+                    <h3>For New Projects</h3>
+                    <ol class="strategy-list">
+                        <li>Use container queries first</li>
+                        <li>Use media queries for layout</li>
+                        <li>Plan progressive enhancement</li>
+                        <li>Document approach clearly</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-practices">
+            <h2>Best Practices</h2>
+            <div class="practices-grid">
+                <div class="practice">
+                    <h4>1. Use Media Queries for Layout</h4>
+                    <p>Page-level structural changes respond to viewport</p>
+                </div>
+                <div class="practice">
+                    <h4>2. Use Container Queries for Components</h4>
+                    <p>Reusable components respond to available space</p>
+                </div>
+                <div class="practice">
+                    <h4>3. Test Multiple Contexts</h4>
+                    <p>Verify components work in different layouts</p>
+                </div>
+                <div class="practice">
+                    <h4>4. Provide Fallbacks</h4>
+                    <p>Ensure graceful degradation in older browsers</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="future-section">
+            <h2>The Future of Responsive Design</h2>
+            <p>Container queries represent the next evolution in responsive web design. As browser support expands, they will become the primary way to build responsive components, while media queries remain for page layout and global changes.</p>
+            <div class="future-timeline">
+                <div class="timeline-item">
+                    <h4>Today</h4>
+                    <p>Container queries supported in modern browsers. Fallbacks needed.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Soon</h4>
+                    <p>Broader browser support. Container queries mainstream.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Future</h4>
+                    <p>Universal support. Component-first responsive design.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

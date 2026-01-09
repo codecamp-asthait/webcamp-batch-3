@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes and Pseudo-elements - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pseudo-classes and Pseudo-elements</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p><strong>Pseudo-classes</strong> select elements based on their state or position (like <code>:hover</code>, <code>:first-child</code>). <strong>Pseudo-elements</strong> style specific parts of an element (like <code>::before</code>, <code>::after</code>). They're powerful tools for styling without adding extra HTML.</p>
+        </section>
+
+        <section class="section">
+            <h2>Common Pseudo-classes</h2>
+            
+            <h3>Link States</h3>
+            <div class="link-demo">
+                <a href="#" class="link-example">Unvisited Link</a>
+                <a href="#" class="link-visited">Visited Link</a>
+                <a href="#" class="link-hover">Hover Over Me</a>
+                <a href="#" class="link-active">Click Me</a>
+            </div>
+
+            <h3>Form States</h3>
+            <div class="form-demo">
+                <input type="text" placeholder="Focus me" class="input-focus">
+                <input type="text" value="Disabled" disabled class="input-disabled">
+                <input type="checkbox" id="check1" class="input-checked">
+                <label for="check1">Checked checkbox</label>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Structural Pseudo-classes</h2>
+            <div><span class="first-name">First Name</span></div>
+            <h3>:first-child, :last-child, :nth-child()</h3>
+            <ul class="list-demo">
+                <li>First child</li>
+                <li>Second child</li>
+                <li>Third child</li>
+                <li>Fourth child</li>
+                <li>Last child</li>
+            </ul>
+
+            <h3>:nth-of-type()</h3>
+            <div class="type-demo">
+                <p>First paragraph</p>
+                <div>Div element</div>
+                <p>Second paragraph</p>
+                <p>Third paragraph</p>
+                <div>Another div</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>State Pseudo-classes</h2>
+            
+            <h3>:hover, :active, :focus</h3>
+            <div class="state-demo">
+                <button class="btn-hover">Hover Me</button>
+                <button class="btn-active">Click Me</button>
+                <button class="btn-focus">Focus Me</button>
+            </div>
+
+            <h3>:enabled, :disabled</h3>
+            <div class="enabled-demo">
+                <button class="btn-enabled">Enabled Button</button>
+                <button class="btn-disabled" disabled>Disabled Button</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Pseudo-elements</h2>
+            
+            <h3>::before and ::after</h3>
+            <div class="before-after-demo">
+                <p class="quote">This is a quote with decorative elements</p>
+                <p class="highlight">This text has a highlight effect</p>
+            </div>
+
+            <h3>::first-letter and ::first-line</h3>
+            <div class="text-demo">
+                <p class="first-letter">This paragraph has a styled first letter. The rest of the text continues normally.</p>
+                <p class="first-line">This paragraph has a styled first line. The first line will be styled differently from the rest of the paragraph content.</p>
+            </div>
+
+            <h3>::selection</h3>
+            <p class="selection-demo">Select this text to see the custom selection color</p>
+        </section>
+
+        <section class="section">
+            <h2>Combining Pseudo-classes</h2>
+            <div class="combined-demo">
+                <ul class="combined-list">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Practical Examples</h2>
+            
+            <h3>Card with Icon</h3>
+            <div class="card-icon">
+                <h4>Card Title</h4>
+                <p>This card has an icon created with ::before pseudo-element</p>
+            </div>
+
+            <h3>Breadcrumb Navigation</h3>
+            <nav class="breadcrumb">
+                <a href="#">Home</a>
+                <a href="#">Category</a>
+                <a href="#">Page</a>
+            </nav>
+
+            <h3>Custom Checkbox</h3>
+            <div class="custom-checkbox">
+                <input type="checkbox" id="custom1">
+                <label for="custom1">Custom styled checkbox</label>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with pseudo-classes and pseudo-elements! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Interactive buttons with hover and active states</li>
+                    <li>Styled form inputs with focus states</li>
+                    <li>Decorative elements using ::before and ::after</li>
+                    <li>A navigation menu with hover effects</li>
+                    <li>Custom list styling with :nth-child()</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

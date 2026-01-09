@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perspective - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Perspective in CSS</h1>
+        <p class="subtitle">Master depth perception and vanishing points in 3D space</p>
+
+        <section>
+            <h2>Understanding Perspective Values</h2>
+            <p>Same transform with different perspective distances. Notice how the perspective distance affects the dramatic depth effect.</p>
+            <div class="perspective-comparison">
+                <div class="perspective-demo">
+                    <h3>600px (Strong)</h3>
+                    <div class="scene scene-strong">
+                        <div class="demo-cube strong-cube">600</div>
+                    </div>
+                </div>
+                <div class="perspective-demo">
+                    <h3>1000px (Balanced)</h3>
+                    <div class="scene scene-balanced">
+                        <div class="demo-cube balanced-cube">1000</div>
+                    </div>
+                </div>
+                <div class="perspective-demo">
+                    <h3>1500px (Subtle)</h3>
+                    <div class="scene scene-subtle">
+                        <div class="demo-cube subtle-cube">1500</div>
+                    </div>
+                </div>
+                <div class="perspective-demo">
+                    <h3>2000px (Minimal)</h3>
+                    <div class="scene scene-minimal">
+                        <div class="demo-cube minimal-cube">2000</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Perspective Origin Points</h2>
+            <p>The vanishing point determines where parallel lines converge. Watch how different origins affect the 3D effect.</p>
+            <div class="origin-demo-grid">
+                <div class="origin-demo">
+                    <h3>Center (50%, 50%)</h3>
+                    <div class="scene origin-center-scene">
+                        <div class="origin-element">Center</div>
+                    </div>
+                </div>
+                <div class="origin-demo">
+                    <h3>Top-Left (0%, 0%)</h3>
+                    <div class="scene origin-topleft-scene">
+                        <div class="origin-element">Top-Left</div>
+                    </div>
+                </div>
+                <div class="origin-demo">
+                    <h3>Top-Right (100%, 0%)</h3>
+                    <div class="scene origin-topright-scene">
+                        <div class="origin-element">Top-Right</div>
+                    </div>
+                </div>
+                <div class="origin-demo">
+                    <h3>Bottom-Left (0%, 100%)</h3>
+                    <div class="scene origin-bottomleft-scene">
+                        <div class="origin-element">Bottom-Left</div>
+                    </div>
+                </div>
+                <div class="origin-demo">
+                    <h3>Bottom-Right (100%, 100%)</h3>
+                    <div class="scene origin-bottomright-scene">
+                        <div class="origin-element">Bottom-Right</div>
+                    </div>
+                </div>
+                <div class="origin-demo">
+                    <h3>Custom (75%, 25%)</h3>
+                    <div class="scene origin-custom-scene">
+                        <div class="origin-element">Custom</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Layered 3D Cards</h2>
+            <p>Stack multiple cards at different Z depths to create depth layering effects.</p>
+            <div class="layered-cards-container">
+                <h3>Card Stack with Perspective</h3>
+                <div class="cards-scene">
+                    <div class="card-layer layer-1">Card 1</div>
+                    <div class="card-layer layer-2">Card 2</div>
+                    <div class="card-layer layer-3">Card 3</div>
+                    <div class="card-layer layer-4">Card 4</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Perspective with Nested Transforms</h2>
+            <p>Combine perspective with multiple transforms for complex effects.</p>
+            <div class="nested-demo-grid">
+                <div class="nested-demo">
+                    <h3>Rotating Cards</h3>
+                    <div class="nested-scene">
+                        <div class="rotating-card card-1">1</div>
+                        <div class="rotating-card card-2">2</div>
+                        <div class="rotating-card card-3">3</div>
+                    </div>
+                </div>
+                <div class="nested-demo">
+                    <h3>Cascading Elements</h3>
+                    <div class="cascade-scene">
+                        <div class="cascade-item cascade-1">A</div>
+                        <div class="cascade-item cascade-2">B</div>
+                        <div class="cascade-item cascade-3">C</div>
+                        <div class="cascade-item cascade-4">D</div>
+                    </div>
+                </div>
+                <div class="nested-demo">
+                    <h3>Depth Stacking</h3>
+                    <div class="stack-scene">
+                        <div class="stacked-box stack-box-1">Far</div>
+                        <div class="stacked-box stack-box-2">Mid</div>
+                        <div class="stacked-box stack-box-3">Near</div>
+                    </div>
+                </div>
+                <div class="nested-demo">
+                    <h3>Orbital Motion</h3>
+                    <div class="orbit-scene">
+                        <div class="orbit-ring">
+                            <div class="orbit-point"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vanishing Point Demonstration</h2>
+            <p>Multiple elements converging at a single vanishing point create illusion of depth.</p>
+            <div class="vanishing-point-demo">
+                <h3>Converging Lines</h3>
+                <div class="vanishing-scene">
+                    <div class="vanishing-line line-1"></div>
+                    <div class="vanishing-line line-2"></div>
+                    <div class="vanishing-line line-3"></div>
+                    <div class="vanishing-line line-4"></div>
+                    <div class="vanishing-line line-5"></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Perspective Transforms</h2>
+            <p>Combine perspective origin with various transforms for creative effects.</p>
+            <div class="transform-demo-grid">
+                <div class="transform-demo">
+                    <h3>Flip Book</h3>
+                    <div class="flipbook-scene">
+                        <div class="flipbook-page page-1">1</div>
+                        <div class="flipbook-page page-2">2</div>
+                        <div class="flipbook-page page-3">3</div>
+                    </div>
+                </div>
+                <div class="transform-demo">
+                    <h3>Window Blinds</h3>
+                    <div class="blinds-scene">
+                        <div class="blind blind-1"></div>
+                        <div class="blind blind-2"></div>
+                        <div class="blind blind-3"></div>
+                        <div class="blind blind-4"></div>
+                    </div>
+                </div>
+                <div class="transform-demo">
+                    <h3>Card Spread</h3>
+                    <div class="spread-scene">
+                        <div class="spread-card spread-1"></div>
+                        <div class="spread-card spread-2"></div>
+                        <div class="spread-card spread-3"></div>
+                        <div class="spread-card spread-4"></div>
+                    </div>
+                </div>
+                <div class="transform-demo">
+                    <h3>Floating Letters</h3>
+                    <div class="letters-scene">
+                        <div class="floating-letter letter-a">A</div>
+                        <div class="floating-letter letter-b">B</div>
+                        <div class="floating-letter letter-c">C</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Advanced Perspective Techniques</h2>
+            <div class="advanced-demo-grid">
+                <div class="advanced-demo">
+                    <h3>3D Text</h3>
+                    <div class="text-3d-scene">
+                        <div class="text-3d-layer">CSS</div>
+                        <div class="text-3d-shadow">CSS</div>
+                    </div>
+                </div>
+                <div class="advanced-demo">
+                    <h3>Gallery Grid</h3>
+                    <div class="gallery-scene">
+                        <div class="gallery-item item-1">1</div>
+                        <div class="gallery-item item-2">2</div>
+                        <div class="gallery-item item-3">3</div>
+                        <div class="gallery-item item-4">4</div>
+                    </div>
+                </div>
+                <div class="advanced-demo">
+                    <h3>Wave Effect</h3>
+                    <div class="wave-scene">
+                        <div class="wave-box wave-1"></div>
+                        <div class="wave-box wave-2"></div>
+                        <div class="wave-box wave-3"></div>
+                        <div class="wave-box wave-4"></div>
+                        <div class="wave-box wave-5"></div>
+                    </div>
+                </div>
+                <div class="advanced-demo">
+                    <h3>Tilting Cards</h3>
+                    <div class="tilt-scene">
+                        <div class="tilt-item tilt-1">Tilt</div>
+                        <div class="tilt-item tilt-2">Tilt</div>
+                        <div class="tilt-item tilt-3">Tilt</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Code Examples</h2>
+            <div class="code-example">
+                <h3>Perspective with Transform Origin</h3>
+                <pre>.scene {
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.element {
+    transform: rotateY(45deg);
+}
+
+/* Different vanishing points */
+.top-left {
+    perspective-origin: 0% 0%;
+}
+
+.bottom-right {
+    perspective-origin: 100% 100%;
+}</pre>
+            </div>
+
+            <div class="code-example">
+                <h3>3D Card Stack</h3>
+                <pre>.card-stack {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.card {
+    position: absolute;
+    transition: transform 0.3s;
+    backface-visibility: hidden;
+}
+
+.card:nth-child(1) { transform: translateZ(0px); }
+.card:nth-child(2) { transform: translateZ(-10px) rotateY(-2deg); }
+.card:nth-child(3) { transform: translateZ(-20px) rotateY(-4deg); }
+.card:nth-child(4) { transform: translateZ(-30px) rotateY(-6deg); }
+
+.card-stack:hover .card:nth-child(1) {
+    transform: rotateY(5deg) translateZ(20px);
+}</pre>
+            </div>
+
+            <div class="code-example">
+                <h3>Responsive Perspective</h3>
+                <pre>.scene {
+    perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+    .scene {
+        perspective: 600px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scene {
+        perspective: none;
+    }
+}</pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>Best Practices</h2>
+            <ul class="practices-list">
+                <li>Apply perspective to parent container, not individual elements</li>
+                <li>Use perspective values between 600px and 2000px</li>
+                <li>Combine with <code>transform-style: preserve-3d</code> for nested transforms</li>
+                <li>Set <code>perspective-origin</code> intentionally for specific effects</li>
+                <li>Test on actual devices for perspective rendering</li>
+                <li>Use CSS variables for consistent perspective values</li>
+                <li>Respect <code>prefers-reduced-motion</code> for accessibility</li>
+                <li>Add <code>will-change: transform</code> for animated 3D elements</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

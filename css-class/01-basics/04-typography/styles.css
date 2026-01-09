@@ -1,0 +1,213 @@
+/* Typography */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.topic {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-left: 4px solid #3498db;
+}
+
+/* 1. Font Family */
+.font-serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.font-sans {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-monospace {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.font-custom {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 2. Font Size */
+.size-small {
+    font-size: 12px;
+}
+
+.size-medium {
+    font-size: 16px;
+}
+
+.size-large {
+    font-size: 24px;
+}
+
+.size-xlarge {
+    font-size: 32px;
+}
+
+.size-em {
+    font-size: 2em;
+}
+
+.size-rem {
+    font-size: 1.5rem;
+}
+
+/* 3. Font Weight */
+.weight-light {
+    font-weight: 300;
+}
+
+.weight-normal {
+    font-weight: 400;
+}
+
+.weight-bold {
+    font-weight: 700;
+}
+
+.weight-bolder {
+    font-weight: 900;
+}
+
+/* 4. Font Style */
+.style-normal {
+    font-style: normal;
+}
+
+.style-italic {
+    font-style: italic;
+}
+
+.style-oblique {
+    font-style: oblique;
+}
+
+/* 5. Text Alignment */
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+/* 6. Text Decoration */
+.decoration-none {
+    text-decoration: none;
+}
+
+.decoration-underline {
+    text-decoration: underline;
+}
+
+.decoration-overline {
+    text-decoration: overline;
+}
+
+.decoration-line-through {
+    text-decoration: line-through;
+}
+
+/* 7. Text Transform */
+.transform-uppercase {
+    text-transform: uppercase;
+}
+
+.transform-lowercase {
+    text-transform: lowercase;
+}
+
+.transform-capitalize {
+    text-transform: capitalize;
+}
+
+/* 8. Line Height */
+.line-height-small {
+    line-height: 1.2;
+}
+
+.line-height-normal {
+    line-height: 1.6;
+}
+
+.line-height-large {
+    line-height: 2;
+}
+
+/* 9. Letter Spacing */
+.letter-spacing-tight {
+    letter-spacing: -1px;
+}
+
+.letter-spacing-normal {
+    letter-spacing: normal;
+}
+
+.letter-spacing-wide {
+    letter-spacing: 3px;
+}
+
+/* 10. Text Shadow */
+.shadow-simple {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.shadow-multiple {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3),
+                 4px 4px 8px rgba(0,0,0,0.2);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.shadow-colored {
+    text-shadow: 2px 2px 4px rgba(52, 152, 219, 0.8);
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+

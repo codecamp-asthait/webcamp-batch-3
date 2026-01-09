@@ -1,0 +1,406 @@
+/* CSS Grid Advanced - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+/* Named Grid Lines */
+.named-lines-demo {
+    margin-top: 20px;
+}
+
+.grid-named {
+    display: grid;
+    grid-template-columns: [start] 1fr [center] 1fr [end];
+    grid-template-rows: [row-start] 100px [row-end];
+    gap: 15px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.item-start {
+    grid-column: start / center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.item-center {
+    grid-column: center / end;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.item-end {
+    grid-column: start / end;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.grid-named .grid-item {
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Minmax */
+.minmax-demo {
+    margin-top: 20px;
+}
+
+.grid-minmax {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 15px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.grid-minmax .grid-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Auto-fit */
+.auto-demo {
+    margin-top: 20px;
+}
+
+.grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.grid-auto-fit .grid-item {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Grid Areas Advanced */
+.areas-advanced-demo {
+    margin-top: 20px;
+}
+
+.grid-areas-advanced {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    gap: 15px;
+    min-height: 400px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.area-h {
+    grid-area: header;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.area-n {
+    grid-area: nav;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.area-m {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    color: #666;
+}
+
+.area-a {
+    grid-area: aside;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.area-f {
+    grid-area: footer;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Implicit Grid */
+.implicit-demo {
+    margin-top: 20px;
+}
+
+.grid-implicit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    gap: 15px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.grid-implicit .grid-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Grid Alignment */
+.alignment-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-align {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.grid-align .grid-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.justify-start {
+    justify-items: start;
+}
+
+.justify-center {
+    justify-items: center;
+}
+
+.justify-end {
+    justify-items: end;
+}
+
+/* Dashboard Layout */
+.dashboard-demo {
+    margin-top: 20px;
+}
+
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr);
+    grid-template-rows: auto repeat(2, 200px) auto;
+    grid-template-areas:
+        "header header header header"
+        "sidebar widget1 widget2 widget3"
+        "sidebar widget4 widget4 widget4"
+        "footer footer footer footer";
+    gap: 15px;
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.dash-header {
+    grid-area: header;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dash-sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.dash-widget {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    color: #666;
+    font-weight: bold;
+}
+
+.widget-1 {
+    grid-area: widget1;
+}
+
+.widget-2 {
+    grid-area: widget2;
+}
+
+.widget-3 {
+    grid-area: widget3;
+}
+
+.widget-4 {
+    grid-area: widget4;
+}
+
+.dash-footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .grid-dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "widget1"
+            "widget2"
+            "widget3"
+            "widget4"
+            "footer";
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-minmax {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-areas-advanced {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+    }
+    
+    .alignment-demo {
+        grid-template-columns: 1fr;
+    }
+}

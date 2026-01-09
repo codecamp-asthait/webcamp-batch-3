@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Nesting - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Nesting</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS Nesting allows you to nest CSS rules inside other rules, similar to how HTML elements are nested. This makes CSS more organized, readable, and maintainable, bringing it closer to preprocessor syntax like Sass.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Nesting</h2>
+            <div class="nesting-demo">
+                <div class="card">
+                    <h3>Card Title</h3>
+                    <p>Card content with nested styles</p>
+                    <button>Click Me</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Nested Selectors</h2>
+            <div class="nested-selectors">
+                <div class="parent">
+                    <div class="child">Child Element</div>
+                    <div class="sibling">Sibling Element</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Nested Pseudo-classes</h2>
+            <div class="pseudo-demo">
+                <button class="hover-button">Hover Me</button>
+                <a href="#" class="link-demo">Link Example</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Nested Media Queries</h2>
+            <div class="media-demo">
+                <div class="responsive-box">Resize the window to see the effect</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Complex Nesting Example</h2>
+            <div class="complex-nesting">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with CSS nesting! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A component with nested styles</li>
+                    <li>A navigation with nested selectors</li>
+                    <li>A card component with nested pseudo-classes</li>
+                    <li>A responsive layout with nested media queries</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #333;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+p {
+    text-align: justify;
+    color: #555;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+/* Multi-Column Count */
+.multi-col-count {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 1px solid #ddd;
+}
+
+.multi-col-count h3 {
+    column-span: all;
+    margin-bottom: 20px;
+}
+
+/* Multi-Column Width */
+.multi-col-width {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    columns: 300px auto;
+    column-gap: 30px;
+}
+
+.multi-col-width h3 {
+    column-span: all;
+    margin-bottom: 20px;
+}
+
+/* Multi-Column with Rule */
+.multi-col-rule {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    column-count: 2;
+    column-gap: 40px;
+    column-rule: 3px double #667eea;
+}
+
+.multi-col-rule h3 {
+    column-span: all;
+    margin-bottom: 20px;
+}
+
+/* Multi-Column with Span */
+.multi-col-span {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    column-count: 3;
+    column-gap: 30px;
+}
+
+.span-heading {
+    column-span: all;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    margin: -25px -25px 20px -25px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .multi-col-count,
+    .multi-col-width,
+    .multi-col-rule,
+    .multi-col-span {
+        column-count: 1;
+    }
+
+    .multi-col-width {
+        columns: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 40px;
+    }
+
+    .multi-col-count {
+        column-count: 4;
+    }
+}

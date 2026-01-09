@@ -1,0 +1,379 @@
+/* Floats and Clearing - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+/* Basic Float Examples */
+.float-demo {
+    background: white;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    overflow: hidden; /* Contains floats */
+}
+
+.float-box {
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+.float-right {
+    float: right;
+    margin-left: 20px;
+}
+
+.float-demo p {
+    text-align: justify;
+    color: #666;
+}
+
+/* Image with Text Wrapping */
+.image-wrap-demo {
+    background: white;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.wrapped-image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.image-wrap-demo p {
+    text-align: justify;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Clear Property */
+.clear-demo {
+    background: white;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clear-demo .float-box {
+    margin-bottom: 0;
+}
+
+.no-clear {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.with-clear {
+    clear: left;
+    color: #666;
+    background: #e7f3ff;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+}
+
+/* Clear Values */
+.clear-values-demo {
+    background: white;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.float-left-box {
+    float: left;
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.float-right-box {
+    float: right;
+    width: 120px;
+    height: 80px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.clear-left {
+    clear: left;
+    background: #d4edda;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 4px solid #28a745;
+}
+
+.clear-right {
+    clear: right;
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 4px solid #ffc107;
+}
+
+.clear-both {
+    clear: both;
+    background: #d1ecf1;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #17a2b8;
+}
+
+/* Float Layout (Legacy) */
+.float-layout {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.float-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    clear: both;
+}
+
+.float-sidebar {
+    float: left;
+    width: 200px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    min-height: 200px;
+    font-weight: bold;
+}
+
+.float-main {
+    margin-left: 200px;
+    padding: 20px;
+    background: #f8f9fa;
+    color: #666;
+    min-height: 200px;
+}
+
+.float-footer {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    clear: both;
+}
+
+/* Clearfix Technique */
+.clearfix-demo {
+    background: white;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden; /* Modern clearfix */
+}
+
+.clearfix-demo::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.float-item {
+    float: left;
+    width: calc(33.333% - 20px);
+    margin-right: 20px;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.float-item:last-child {
+    margin-right: 0;
+}
+
+.clearfix-explanation {
+    margin-top: 15px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Multiple Floated Elements */
+.multi-float-demo {
+    background: white;
+    padding: 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.multi-float {
+    float: left;
+    width: calc(25% - 15px);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.multi-float:nth-child(4n) {
+    margin-right: 0;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .float-sidebar {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .float-main {
+        margin-left: 0;
+    }
+    
+    .float-item,
+    .multi-float {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .float-item:last-child,
+    .multi-float:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Transitions API - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>View Transitions API</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>The View Transitions API provides a mechanism for creating smooth transitions between different states of a page. It enables seamless animations when navigating between pages or updating content, creating a native app-like experience.</p>
+            <p class="note">Note: View Transitions API is a modern feature with limited browser support. Check browser compatibility before using in production.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic View Transition</h2>
+            <div class="transition-demo">
+                <div class="view-box" id="viewBox">Click to Transition</div>
+            </div>
+            <button onclick="toggleView()" class="toggle-btn">Toggle View</button>
+        </section>
+
+        <section class="section">
+            <h2>Named Transitions</h2>
+            <div class="named-demo">
+                <div class="named-box" id="namedBox">Named Transition</div>
+            </div>
+            <button onclick="toggleNamed()" class="toggle-btn">Toggle Named</button>
+        </section>
+
+        <section class="section">
+            <h2>View Transition Types</h2>
+            <div class="types-demo">
+                <div class="type-box fade">Fade</div>
+                <div class="type-box slide">Slide</div>
+                <div class="type-box scale">Scale</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>CSS View Transition Properties</h2>
+            <div class="properties-demo">
+                <div class="prop-box">View Transition Root</div>
+                <div class="prop-box">View Transition Group</div>
+                <div class="prop-box">View Transition Image Pair</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with View Transitions! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Page transitions with view transitions</li>
+                    <li>Content updates with smooth transitions</li>
+                    <li>Named transitions for specific elements</li>
+                    <li>Custom transition animations</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleView() {
+            const box = document.getElementById('viewBox');
+            if (!document.startViewTransition) {
+                alert('View Transitions API not supported in this browser');
+                return;
+            }
+            document.startViewTransition(() => {
+                box.classList.toggle('active');
+            });
+        }
+
+        function toggleNamed() {
+            const box = document.getElementById('namedBox');
+            if (!document.startViewTransition) {
+                alert('View Transitions API not supported in this browser');
+                return;
+            }
+            document.startViewTransition(() => {
+                box.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

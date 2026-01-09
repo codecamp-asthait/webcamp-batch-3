@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Box Model</h1>
+        
+        <section class="section">
+            <h2>Box Model Visualization</h2>
+            <div class="box-model-demo">
+                <div class="content">Content Area</div>
+                <div class="labels">
+                    <span class="label padding-label">Padding</span>
+                    <span class="label border-label">Border</span>
+                    <span class="label margin-label">Margin</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Box-Sizing Comparison</h2>
+            <div class="comparison">
+                <div class="box content-box">
+                    <h3>content-box</h3>
+                    <p>Width: 200px</p>
+                    <p>Padding: 20px</p>
+                    <p>Border: 5px</p>
+                    <p class="highlight">Total: 250px</p>
+                </div>
+                <div class="box border-box">
+                    <h3>border-box</h3>
+                    <p>Width: 200px</p>
+                    <p>Padding: 20px</p>
+                    <p>Border: 5px</p>
+                    <p class="highlight">Total: 200px</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Margin Examples</h2>
+            <div class="margin-demo">
+                <div class="box-margin box-1">Margin: 20px all sides</div>
+                <div class="box-margin box-2">Margin: 30px top/bottom, 50px left/right</div>
+                <div class="box-margin box-3">Centered with margin: 0 auto</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Margin Collapse</h2>
+            <div class="collapse-demo">
+                <div class="collapse-box box-a">
+                    <p>Margin-bottom: 30px</p>
+                </div>
+                <div class="collapse-box box-b">
+                    <p>Margin-top: 20px</p>
+                </div>
+                <p class="note">The space between these boxes is 30px (not 50px) due to margin collapse!</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Padding Examples</h2>
+            <div class="padding-demo">
+                <div class="box-padding padding-1">Padding: 10px</div>
+                <div class="box-padding padding-2">Padding: 20px 40px</div>
+                <div class="box-padding padding-3">Padding: 30px</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Real-World Example: Cards</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-header">Card Header</div>
+                    <div class="card-body">
+                        <p>This card demonstrates proper use of padding, margin, and borders.</p>
+                        <button class="card-button">Action</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Card Header</div>
+                    <div class="card-body">
+                        <p>Notice how the box model affects the overall layout and spacing.</p>
+                        <button class="card-button">Action</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Use browser DevTools (F12) to inspect these elements and see the box model!</p>
+            <div class="practice-box">
+                <p>Right-click and select "Inspect" to see this element's box model</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Images</h1>
+        
+        <section class="intro-section">
+            <h2>Serving Images for Every Device</h2>
+            <p>Responsive images optimize file size and visual quality across different screen sizes and resolutions.</p>
+        </section>
+
+        <section class="basic-responsive">
+            <h2>Basic Responsive Images</h2>
+            <div class="image-demo">
+                <div class="demo-image"></div>
+                <p class="demo-label">max-width: 100%; height: auto;</p>
+            </div>
+            <p>The basic approach: let images scale with their containers.</p>
+        </section>
+
+        <section class="picture-element">
+            <h2>Picture Element</h2>
+            <p>The picture element serves different images for different conditions:</p>
+            <div class="code-example">
+                <h3>Art Direction Example</h3>
+                <pre>&lt;picture&gt;
+    &lt;source media="(max-width: 479px)" 
+            srcset="image-mobile.jpg"&gt;
+    &lt;source media="(min-width: 768px)" 
+            srcset="image-desktop.jpg"&gt;
+    &lt;img src="image-default.jpg" alt="Image"&gt;
+&lt;/picture&gt;</pre>
+            </div>
+        </section>
+
+        <section class="srcset-section">
+            <h2>Srcset and Sizes</h2>
+            <p>Serve different resolutions based on device capabilities:</p>
+            <div class="code-example">
+                <h3>Resolution-Based Srcset</h3>
+                <pre>&lt;img src="image.jpg"
+     srcset="image-small.jpg 480w,
+             image-medium.jpg 768w,
+             image-large.jpg 1280w"
+     sizes="(max-width: 600px) 100vw,
+            50vw"
+     alt="Responsive image"&gt;</pre>
+            </div>
+            <div class="srcset-cards">
+                <div class="card">
+                    <h4>480w</h4>
+                    <p>Mobile (up to 479px)</p>
+                </div>
+                <div class="card">
+                    <h4>768w</h4>
+                    <p>Tablet (480-767px)</p>
+                </div>
+                <div class="card">
+                    <h4>1280w</h4>
+                    <p>Desktop (768px+)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="formats-section">
+            <h2>Modern Image Formats</h2>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <h3>JPEG</h3>
+                    <p class="format-ext">.jpg</p>
+                    <p>Lossy compression, photos</p>
+                </div>
+                <div class="format-card">
+                    <h3>PNG</h3>
+                    <p class="format-ext">.png</p>
+                    <p>Lossless, transparency</p>
+                </div>
+                <div class="format-card">
+                    <h3>WebP</h3>
+                    <p class="format-ext">.webp</p>
+                    <p>Better compression</p>
+                </div>
+                <div class="format-card">
+                    <h3>AVIF</h3>
+                    <p class="format-ext">.avif</p>
+                    <p>Best compression</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modern-formats">
+            <h2>Format Fallback Chain</h2>
+            <div class="code-example">
+                <h3>Progressive Format Support</h3>
+                <pre>&lt;picture&gt;
+    &lt;source type="image/avif" 
+            srcset="image.avif"&gt;
+    &lt;source type="image/webp" 
+            srcset="image.webp"&gt;
+    &lt;source type="image/jpeg" 
+            srcset="image.jpg"&gt;
+    &lt;img src="image.jpg" alt="Responsive"&gt;
+&lt;/picture&gt;</pre>
+            </div>
+        </section>
+
+        <section class="object-fit-section">
+            <h2>Object-Fit and Object-Position</h2>
+            <div class="object-fit-grid">
+                <div class="object-fit-demo">
+                    <div class="object-fit-box cover">
+                        <div class="placeholder">cover</div>
+                    </div>
+                    <p>Fill container, crop edges</p>
+                </div>
+                <div class="object-fit-demo">
+                    <div class="object-fit-box contain">
+                        <div class="placeholder">contain</div>
+                    </div>
+                    <p>Fit inside, no crop</p>
+                </div>
+                <div class="object-fit-demo">
+                    <div class="object-fit-box fill">
+                        <div class="placeholder">fill</div>
+                    </div>
+                    <p>Stretch to fill</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="aspect-ratio-section">
+            <h2>Aspect Ratio</h2>
+            <p>Prevent layout shift by reserving space based on aspect ratio:</p>
+            <div class="aspect-ratio-grid">
+                <div class="aspect-demo">
+                    <div class="aspect-box ratio-16-9">
+                        <div class="placeholder">16:9</div>
+                    </div>
+                </div>
+                <div class="aspect-demo">
+                    <div class="aspect-box ratio-4-3">
+                        <div class="placeholder">4:3</div>
+                    </div>
+                </div>
+                <div class="aspect-demo">
+                    <div class="aspect-box ratio-1-1">
+                        <div class="placeholder">1:1</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lazy-loading">
+            <h2>Lazy Loading</h2>
+            <div class="code-example">
+                <pre>&lt;img src="image.jpg" 
+     alt="Description"
+     loading="lazy"&gt;</pre>
+            </div>
+            <p>Defer off-screen images to improve page load performance.</p>
+        </section>
+
+        <section class="best-practices">
+            <h2>Responsive Image Checklist</h2>
+            <div class="checklist">
+                <div class="item"> max-width: 100% on all images</div>
+                <div class="item"> height: auto or aspect-ratio set</div>
+                <div class="item"> Descriptive alt text for accessibility</div>
+                <div class="item"> srcset for multiple resolutions</div>
+                <div class="item"> picture element for art direction</div>
+                <div class="item"> Modern formats with fallbacks</div>
+                <div class="item"> Lazy loading for off-screen images</div>
+                <div class="item"> Testing on multiple devices</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

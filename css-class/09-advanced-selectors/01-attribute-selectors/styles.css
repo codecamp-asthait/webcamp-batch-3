@@ -1,0 +1,208 @@
+/* Advanced Attribute Selectors - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.selector-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Exact Match [attr="value"] */
+input[type="text"] {
+    border: 2px solid #667eea;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+input[type="email"] {
+    border: 2px solid #f093fb;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+input[type="password"] {
+    border: 2px solid #4facfe;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Begins With [attr^="value"] */
+a[href^="https://"] {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    background: #e7f3ff;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+a[href^="http://"] {
+    color: #f093fb;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    background: #ffe7f3;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* Ends With [attr$="value"] */
+a[href$=".jpg"],
+a[href$=".png"] {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    background: #e7f3ff;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+a[href$=".pdf"] {
+    color: #f5576c;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    background: #ffe7f3;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* Contains [attr*="value"] */
+[data-info*="important"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+[data-info]:not([data-info*="important"]) {
+    background: #e9ecef;
+    color: #666;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Word Match [attr~="value"] */
+[data-class~="primary"] {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+[data-class~="secondary"] {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Starts With [attr|="value"] */
+[lang|="en"] {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+[lang|="fr"] {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .selector-demo {
+        gap: 10px;
+    }
+}

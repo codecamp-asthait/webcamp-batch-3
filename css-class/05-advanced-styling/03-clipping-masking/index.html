@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipping and Masking - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Clipping and Masking</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS clipping and masking allow you to hide portions of elements, creating interesting visual effects. <code>clip-path</code> creates geometric shapes, while <code>mask</code> uses images or gradients to control visibility.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic clip-path Shapes</h2>
+            <div class="clip-grid">
+                <div class="clip-item">
+                    <div class="clip-demo clip-circle">Circle</div>
+                    <p>clip-path: circle(50%)</p>
+                </div>
+                <div class="clip-item">
+                    <div class="clip-demo clip-ellipse">Ellipse</div>
+                    <p>clip-path: ellipse(60% 40%)</p>
+                </div>
+                <div class="clip-item">
+                    <div class="clip-demo clip-polygon">Polygon</div>
+                    <p>clip-path: polygon(...)</p>
+                </div>
+                <div class="clip-item">
+                    <div class="clip-demo clip-inset">Inset</div>
+                    <p>clip-path: inset(20%)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Advanced clip-path Examples</h2>
+            <div class="advanced-clip-grid">
+                <div class="advanced-clip star-clip">Star Shape</div>
+                <div class="advanced-clip arrow-clip">Arrow</div>
+                <div class="advanced-clip hexagon-clip">Hexagon</div>
+                <div class="advanced-clip speech-clip">Speech Bubble</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Animated clip-path</h2>
+            <div class="animation-demo">
+                <div class="animated-clip">Hover to Animate</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>CSS Masking</h2>
+            <p>The <code>mask</code> property uses images or gradients to control element visibility.</p>
+            
+            <div class="mask-grid">
+                <div class="mask-demo mask-gradient">
+                    <div class="mask-content">Gradient Mask</div>
+                </div>
+                <div class="mask-demo mask-radial">
+                    <div class="mask-content">Radial Mask</div>
+                </div>
+                <div class="mask-demo mask-image">
+                    <div class="mask-content">Image Mask</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Text Clipping</h2>
+            <div class="text-clip-container">
+                <h3 class="text-clip-bg">Clipped Text Background</h3>
+                <h3 class="text-clip-shape">Shaped Text</h3>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Image Effects</h2>
+            <div class="image-effects-grid">
+                <div class="image-effect effect-1">
+                    <div class="effect-label">Diamond</div>
+                </div>
+                <div class="image-effect effect-2">
+                    <div class="effect-label">Octagon</div>
+                </div>
+                <div class="image-effect effect-3">
+                    <div class="effect-label">Custom Shape</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with clipping and masking! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A card with a custom clip-path shape</li>
+                    <li>An image gallery with different clip-path shapes</li>
+                    <li>Text with a gradient mask effect</li>
+                    <li>An animated clip-path transition</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

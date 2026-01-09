@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Path - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Motion Path</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>The <code>motion-path</code> property allows you to animate an element along a custom path. This enables complex curved animations, circular paths, and custom trajectory movements that would be difficult to achieve with standard transform animations.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Motion Path</h2>
+            <div class="motion-demo">
+                <svg class="path-svg" viewBox="0 0 400 200">
+                    <path id="path1" d="M 50 100 Q 200 20, 350 100" stroke="#667eea" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="motion-box path-1">Motion Path</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Circular Path</h2>
+            <div class="motion-demo">
+                <svg class="path-svg" viewBox="0 0 300 300">
+                    <circle id="circle1" cx="150" cy="150" r="100" stroke="#667eea" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="motion-box path-circle">Circular Path</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Offset Path</h2>
+            <div class="motion-demo">
+                <svg class="path-svg" viewBox="0 0 400 200">
+                    <path id="path2" d="M 50 100 L 350 100" stroke="#667eea" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="motion-box path-offset">Offset Path</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Motion Offset</h2>
+            <div class="motion-demo">
+                <svg class="path-svg" viewBox="0 0 400 200">
+                    <path id="path3" d="M 50 100 Q 200 20, 350 100" stroke="#667eea" stroke-width="2" fill="none"/>
+                </svg>
+                <div class="motion-box path-offset-50">50% Offset</div>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with motion paths! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>Custom curved path animations</li>
+                    <li>Circular motion paths</li>
+                    <li>Complex trajectory animations</li>
+                    <li>Motion paths with offset</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

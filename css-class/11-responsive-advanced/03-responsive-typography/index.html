@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Typography</h1>
+        
+        <section class="intro-section">
+            <h2>Font Scaling Across Devices</h2>
+            <p>Typography should adapt gracefully to different screen sizes for optimal readability.</p>
+        </section>
+
+        <section class="units-section">
+            <h2>CSS Units</h2>
+            <div class="units-grid">
+                <div class="unit-card">
+                    <h3>px (Pixels)</h3>
+                    <p class="unit-example">Fixed: 16px</p>
+                    <p>Not responsive, use for borders</p>
+                </div>
+                <div class="unit-card">
+                    <h3>em</h3>
+                    <p class="unit-example">Relative: 1.5em</p>
+                    <p>Relative to parent font size</p>
+                </div>
+                <div class="unit-card">
+                    <h3>rem</h3>
+                    <p class="unit-example">Relative: 1.5rem</p>
+                    <p>Relative to root font size</p>
+                </div>
+                <div class="unit-card">
+                    <h3>ch (Characters)</h3>
+                    <p class="unit-example">Content: 65ch</p>
+                    <p>Width based on character count</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scale-section">
+            <h2>Typography Scale</h2>
+            <div class="scale-demo">
+                <p class="text-small">Small Text 14px</p>
+                <p class="text-base">Base Text 16px</p>
+                <p class="text-large">Large Text 18px</p>
+                <h6>Heading 6 - 20px</h6>
+                <h5>Heading 5 - 24px</h5>
+                <h4>Heading 4 - 28px</h4>
+                <h3>Heading 3 - 32px</h3>
+                <h2>Heading 2 - 40px</h2>
+                <h1 class="scale-h1">Heading 1 - Responsive Size</h1>
+            </div>
+        </section>
+
+        <section class="line-length-section">
+            <h2>Optimal Line Length</h2>
+            <div class="line-length-demo">
+                <p class="content-para">This paragraph demonstrates optimal line length for readability. The max-width is set to 65 characters (65ch), which is the recommended range of 45-75 characters for comfortable reading. Line height is also adjusted for proper vertical rhythm and spacing.</p>
+            </div>
+            <p class="note">Optimal line length: 45-75 characters. Use max-width: 65ch on paragraphs.</p>
+        </section>
+
+        <section class="responsive-heading">
+            <h2>Responsive Spacing Example</h2>
+            <div class="spacing-demo">
+                <div class="spaced-section">
+                    <h3>Section Title</h3>
+                    <p>This section demonstrates responsive spacing. The margins and padding scale with the viewport size, maintaining proper visual hierarchy across devices.</p>
+                </div>
+                <div class="spaced-section">
+                    <h3>Another Section</h3>
+                    <p>Spacing units are defined in rem, which scale relative to the root font size, ensuring consistent proportions throughout the entire page.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="code-section">
+            <h2>Font Sizing Strategies</h2>
+            <div class="code-example">
+                <h3>Breakpoint-Based Scaling</h3>
+                <pre>/* Mobile First */
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.3rem; }
+p { font-size: 1rem; }
+
+/* Tablet */
+@media (min-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+}</pre>
+            </div>
+        </section>
+
+        <section class="fluid-section">
+            <h2>Fluid Typography with calc()</h2>
+            <p>Text that scales smoothly without breakpoints:</p>
+            <p class="fluid-text">This text scales fluidly between breakpoints using CSS calc() for smooth transitions.</p>
+            <div class="code-example">
+                <pre>h1 {
+    font-size: calc(1.5rem + (2.5 - 1.5) * (100vw - 320px) / (1280 - 320));
+    max-width: 1280px;
+}</pre>
+            </div>
+        </section>
+
+        <section class="best-practices-section">
+            <h2>Typography Best Practices</h2>
+            <div class="practices-grid">
+                <div class="practice-card">
+                    <h3>Use rem for Base</h3>
+                    <p>Set font sizes in rem for predictable scaling across the entire site.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Maintain Line Height</h3>
+                    <p>Keep line-height between 1.2-1.6 for optimal readability and spacing.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Test Readability</h3>
+                    <p>Verify text is readable on all screen sizes and in different lighting.</p>
+                </div>
+                <div class="practice-card">
+                    <h3>Hierarchy Matters</h3>
+                    <p>Use consistent font-weight and size ratios for visual hierarchy.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

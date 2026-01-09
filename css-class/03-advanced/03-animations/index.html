@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations - CSS Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Animations</h1>
+        
+        <section class="section">
+            <h2>Introduction</h2>
+            <p>CSS Animations allow you to create complex, multi-step animations using keyframes. Unlike transitions which animate between two states, animations can have multiple keyframes and can run automatically or be triggered by events.</p>
+        </section>
+
+        <section class="section">
+            <h2>Basic Animation</h2>
+            <div class="animation-demo">
+                <div class="basic-animation">Animated Element</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Animation Properties</h2>
+            <div class="properties-demo">
+                <div class="anim-duration">Duration: 2s</div>
+                <div class="anim-delay">Delay: 1s</div>
+                <div class="anim-iteration">Iterations: 3</div>
+                <div class="anim-direction">Direction: alternate</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Animation Timing Functions</h2>
+            <div class="timing-animations">
+                <div class="timing-anim ease-anim">ease</div>
+                <div class="timing-anim linear-anim">linear</div>
+                <div class="timing-anim ease-in-anim">ease-in</div>
+                <div class="timing-anim ease-out-anim">ease-out</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Keyframe Examples</h2>
+            <div class="keyframe-demo">
+                <div class="keyframe-box bounce">Bounce</div>
+                <div class="keyframe-box slide">Slide</div>
+                <div class="keyframe-box rotate">Rotate</div>
+                <div class="keyframe-box fade">Fade</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Infinite Animations</h2>
+            <div class="infinite-demo">
+                <div class="infinite-box pulse">Pulse</div>
+                <div class="infinite-box spin">Spin</div>
+                <div class="infinite-box shake">Shake</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Animation Fill Mode</h2>
+            <div class="fillmode-demo">
+                <div class="fill-box forwards">Forwards</div>
+                <div class="fill-box backwards">Backwards</div>
+                <div class="fill-box both">Both</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Multiple Animations</h2>
+            <div class="multiple-anim-demo">
+                <div class="multi-anim">Multiple Animations</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Animation Play State</h2>
+            <div class="playstate-demo">
+                <div class="playstate-box" id="playPauseBox">Click to Pause/Play</div>
+                <button onclick="toggleAnimation()">Toggle Animation</button>
+            </div>
+        </section>
+
+        <section class="section practice">
+            <h2>Practice Area</h2>
+            <p>Experiment with animations! Try creating:</p>
+            <div class="practice-box">
+                <ul>
+                    <li>A loading spinner animation</li>
+                    <li>A button with pulse animation</li>
+                    <li>A card entrance animation</li>
+                    <li>A notification slide-in animation</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleAnimation() {
+            const box = document.getElementById('playPauseBox');
+            if (box.style.animationPlayState === 'paused') {
+                box.style.animationPlayState = 'running';
+            } else {
+                box.style.animationPlayState = 'paused';
+            }
+        }
+    </script>
+</body>
+</html>

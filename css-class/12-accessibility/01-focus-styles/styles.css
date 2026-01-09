@@ -1,0 +1,231 @@
+/* Focus Styles and :focus-visible - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+code {
+    background: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+.focus-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.focus-basic,
+.focus-visible-btn,
+.focus-visible-input,
+.focus-visible-link,
+.focus-custom,
+.focus-outline,
+.focus-glow,
+.no-focus,
+.no-focus-good {
+    padding: 12px 24px;
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    background: white;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Basic Focus */
+.focus-basic:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* Focus Visible - Only shows for keyboard navigation */
+.focus-visible-btn:focus-visible,
+.focus-visible-input:focus-visible,
+.focus-visible-link:focus-visible {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.focus-visible-btn:focus:not(:focus-visible),
+.focus-visible-link:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Custom Focus Styles */
+.focus-custom:focus-visible {
+    outline: none;
+    border-color: #f093fb;
+    box-shadow: 0 0 0 4px rgba(240, 147, 251, 0.3),
+                0 0 0 8px rgba(240, 147, 251, 0.1);
+}
+
+.focus-outline:focus-visible {
+    outline: 3px dashed #4facfe;
+    outline-offset: 4px;
+}
+
+.focus-glow:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5),
+                0 0 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Focus Within */
+.focus-within-demo {
+    margin-top: 20px;
+}
+
+.focus-form {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    max-width: 400px;
+}
+
+.focus-form:focus-within {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.focus-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.focus-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.focus-form input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* No Focus (Bad Practice) */
+.no-focus:focus {
+    outline: none;
+}
+
+/* No Focus (Good Practice - Alternative indicator) */
+.no-focus-good:focus {
+    outline: none;
+}
+
+.no-focus-good:focus-visible {
+    outline: 3px solid #f5576c;
+    outline-offset: 2px;
+    background: #fff3cd;
+}
+
+.info {
+    margin-top: 15px;
+    padding: 15px;
+    background: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    border-radius: 4px;
+    color: #1976D2;
+    font-style: italic;
+}
+
+.warning {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    color: #856404;
+    font-weight: bold;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .focus-demo {
+        gap: 10px;
+    }
+}

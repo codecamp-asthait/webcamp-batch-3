@@ -1,0 +1,379 @@
+/* Keyframe Animation Deep Dive - Comprehensive Examples */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #764ba2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.keyframe-demo,
+.fillmode-demo,
+.direction-demo,
+.timing-demo,
+.iteration-demo {
+    margin-top: 20px;
+}
+
+.anim-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Multiple Keyframes */
+.multi-keyframe {
+    animation: multiStep 3s ease infinite;
+}
+
+@keyframes multiStep {
+    0% {
+        transform: translateX(0) scale(1);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    25% {
+        transform: translateX(100px) scale(1.2);
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    50% {
+        transform: translateX(200px) scale(0.8);
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    75% {
+        transform: translateX(100px) scale(1.1);
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+}
+
+/* Percentage Keyframes */
+.percentage-keyframe {
+    animation: percentageAnim 4s ease infinite;
+}
+
+@keyframes percentageAnim {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    10% {
+        transform: translateY(-20px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-15px);
+    }
+    40% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-5px);
+    }
+    80% {
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Complex Sequence */
+.complex-sequence {
+    animation: complexSequence 5s ease infinite;
+}
+
+@keyframes complexSequence {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        border-radius: 8px;
+    }
+    20% {
+        transform: translate(100px, 0) rotate(90deg) scale(1.2);
+        border-radius: 50%;
+    }
+    40% {
+        transform: translate(100px, 100px) rotate(180deg) scale(0.8);
+        border-radius: 8px;
+    }
+    60% {
+        transform: translate(0, 100px) rotate(270deg) scale(1.1);
+        border-radius: 50%;
+    }
+    80% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+        border-radius: 8px;
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+        border-radius: 8px;
+    }
+}
+
+/* Fill Modes */
+.fillmode-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.fill-none {
+    animation: fillAnim 2s ease 1;
+    animation-fill-mode: none;
+}
+
+.fill-forwards {
+    animation: fillAnim 2s ease 1;
+    animation-fill-mode: forwards;
+}
+
+.fill-backwards {
+    animation: fillAnim 2s ease 1;
+    animation-fill-mode: backwards;
+    animation-delay: 1s;
+}
+
+.fill-both {
+    animation: fillAnim 2s ease 1;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+
+@keyframes fillAnim {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Direction */
+.direction-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dir-normal {
+    animation: moveRight 2s ease infinite;
+    animation-direction: normal;
+}
+
+.dir-reverse {
+    animation: moveRight 2s ease infinite;
+    animation-direction: reverse;
+}
+
+.dir-alternate {
+    animation: moveRight 2s ease infinite;
+    animation-direction: alternate;
+}
+
+.dir-alternate-reverse {
+    animation: moveRight 2s ease infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200px);
+    }
+}
+
+/* Multiple Animations */
+.multiple-animations {
+    animation: rotate 2s linear infinite,
+               pulse 1.5s ease infinite,
+               colorChange 3s ease infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    33% {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    66% {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+}
+
+/* Timing */
+.timing-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delay-0 {
+    animation: slideIn 1s ease 1;
+    animation-delay: 0s;
+}
+
+.delay-1 {
+    animation: slideIn 1s ease 1;
+    animation-delay: 1s;
+}
+
+.delay-2 {
+    animation: slideIn 1s ease 1;
+    animation-delay: 2s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Iteration */
+.iteration-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.iter-1 {
+    animation: bounce 1s ease 1;
+}
+
+.iter-3 {
+    animation: bounce 1s ease 3;
+}
+
+.iter-infinite {
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid #667eea;
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fillmode-demo,
+    .direction-demo,
+    .iteration-demo {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,192 @@
+/* CSS Custom Properties Strategies - Comprehensive Examples */
+
+:root {
+    /* Design Tokens */
+    --color-primary: #667eea;
+    --color-secondary: #764ba2;
+    --color-success: #43e97b;
+    --color-danger: #f5576c;
+    
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    
+    /* Theme Variables */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: var(--spacing-xl);
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.tokens-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: 20px;
+}
+
+.token-box {
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.color-token {
+    background: var(--color-primary);
+}
+
+.spacing-token {
+    background: var(--color-secondary);
+    padding: var(--spacing-xl);
+}
+
+.typography-token {
+    background: var(--color-success);
+    font-size: var(--font-size-lg);
+}
+
+.theme-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: 20px;
+}
+
+.theme-box {
+    padding: var(--spacing-xl);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.light-theme {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
+
+.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
+
+.scoped-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: 20px;
+}
+
+.component-a {
+    --component-color: #667eea;
+    --component-spacing: 1.5rem;
+    background: var(--component-color);
+    color: white;
+    padding: var(--component-spacing);
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.component-b {
+    --component-color: #f093fb;
+    --component-spacing: 2rem;
+    background: var(--component-color);
+    color: white;
+    padding: var(--component-spacing);
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Practice Area */
+.practice {
+    background: #fff3cd;
+    border: 2px dashed #856404;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--color-primary);
+}
+
+.practice-box ul {
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.practice-box li {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tokens-demo,
+    .theme-demo,
+    .scoped-demo {
+        grid-template-columns: 1fr;
+    }
+}
