@@ -1,0 +1,63 @@
+/* Base Layout */
+:root {
+  --bg: #0f1320;
+  --panel: #171b2e;
+  --text: #e6e6ef;
+  --muted: #9aa0b6;
+  --accent: #5d8cff;
+  --success: #31c48d;
+  --danger: #ef4e7b;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.site-header, .site-footer {
+  padding: 16px 20px;
+  background: #12162a;
+  border-bottom: 1px solid #21284a;
+}
+.site-footer { border-top: 1px solid #21284a; border-bottom: none; margin-top: 24px; }
+.top-nav { display: flex; gap: 8px; }
+.top-nav button { padding: 8px 12px; }
+
+main { padding: 20px; }
+.panel { display: none; }
+.panel.visible { display: block; }
+
+.container { background: var(--panel); padding: 16px; border-radius: 10px; margin-bottom: 16px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.card { background: var(--panel); border: 1px solid #21284a; border-radius: 12px; padding: 12px; }
+.card h3 { margin: 6px 0 10px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+button { background: #1f2544; color: var(--text); border: 1px solid #2d3566; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+button:hover { background: #263065; }
+label { display: inline-flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+input { padding: 8px; border-radius: 6px; border: 1px solid #2d3566; background: #0e1121; color: var(--text); }
+.output { background: #0e1121; border: 1px solid #21284a; border-radius: 8px; padding: 8px; min-height: 60px; color: #b7c1e3; }
+.demo-form { display: flex; gap: 8px; }
+
+/* Demo elements */
+.list { list-style: none; padding: 0; margin: 0; }
+.item { display: flex; align-items: center; gap: 8px; padding: 8px; border: 1px dashed #2d3566; border-radius: 8px; }
+.box { display: grid; place-items: center; height: 60px; border-radius: 10px; background: #1b2040; border: 1px solid #2d3566; }
+.demo-grid { display: grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); gap: 10px; }
+
+/* Classes used by DOM demo */
+.highlight { outline: 2px solid var(--accent); background: #172047; }
+.completed .todo-text { text-decoration: line-through; color: var(--muted); }
+.todo-app { display: grid; gap: 8px; }
+.todo-app .todo-form { display: flex; gap: 8px; }
+.todo-app .todo-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.todo-item { display: grid; grid-template-columns: 32px 1fr 32px; gap: 8px; align-items: center; padding: 6px; border-radius: 8px; background: #12162a; border: 1px solid #21284a; }
+.todo-item .toggle-btn, .todo-item .delete-btn { padding: 6px; }
+.todo-stats { display: flex; gap: 12px; color: var(--muted); }
+
+/* CSSOM demo dynamic styles may target these */
+.dyn-1, .dyn-2 { background: #1b2040; }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson Code: DOM & CSSOM API</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>DOM & CSSOM Playground</h1>
+      <nav class="top-nav">
+        <button id="show-dom">Show DOM Demo</button>
+        <button id="show-cssom">Show CSSOM Demo</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- DOM DEMO SECTION -->
+      <section id="dom-section" class="panel visible">
+        <h2>DOM API Demo</h2>
+
+        <div class="container">
+          <h3 id="main-title"><b>Welcome</b></h3>
+          <p class="intro">This is a paragraph.</p>
+          <p class="intro">This is a paragraph 2.</p>
+          <ul class="nav-list" id="primary-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Selection & Traversal</h3>
+            <div class="controls">
+              <button id="select-demo">Run Selection Demo</button>
+              <button id="traverse-demo">Run Traversal Demo</button>
+            </div>
+            <pre id="selection-output" class="output"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Content & Structure</h3>
+            <div class="controls">
+              <button id="update-text">Update Title Text</button>
+              <button id="add-section">Create New Section</button>
+              <button id="clone-nav">Clone Nav</button>
+              <button id="remove-section">Remove New Section</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Attributes & Classes</h3>
+            <div class="controls">
+              <button id="set-attrs">Set Link Attributes</button>
+              <button id="toggle-class">Toggle Highlight Class</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Styles & Computed Styles</h3>
+            <div class="controls">
+              <button id="apply-inline-styles">Apply Inline Styles</button>
+              <button id="show-computed">Show Computed Styles</button>
+            </div>
+            <pre id="computed-output" class="output"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Events & Delegation</h3>
+            <form id="demo-form" class="demo-form">
+              <input type="text" name="username" placeholder="Type here..." required />
+              <button type="submit">Submit</button>
+            </form>
+
+            <ul class="list" id="delegation-list">
+              <li class="item"><button>Add ✓</button></li>
+              <li class="item"><button>Remove ✕</button></li>
+            </ul>
+            <div class="controls">
+              <button id="add-delegation-item">Add List Item</button>
+            </div>
+            <pre id="event-output" class="output"></pre>
+          </div>
+
+          <div id="event-capturing" class="event-capturing">
+            <button id="event-bubbling" class="event-bubbling">Inner button</button>
+          </div>
+
+          <div class="card" >
+            <h3>Todo List Example</h3>
+            <div id="app" class="todo-host"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CSSOM DEMO SECTION -->
+      <section id="cssom-section" class="panel">
+        <h2>CSSOM API Demo</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Stylesheets & Rules</h3>
+            <div class="controls">
+              <button id="list-stylesheets">List Stylesheets</button>
+              <button id="list-rules">List All Rules</button>
+              <button id="toggle-stylesheet">Toggle Stylesheet Enabled</button>
+            </div>
+            <pre id="cssom-stylesheets-output" class="output"></pre>
+            <pre id="cssom-rules-output" class="output"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Insert / Delete Rules</h3>
+            <div class="controls">
+              <label>
+                Selector
+                <input id="rule-selector" type="text" value=".dynamic-box" />
+              </label>
+              <label>
+                Declarations
+                <input id="rule-decl" type="text" value="background:gold; color:#222; padding:12px;" />
+              </label>
+              <button id="insert-rule">Insert Rule</button>
+              <button id="delete-last-rule">Delete Last Rule</button>
+            </div>
+            <div class="demo-grid">
+              <div class="box">Static Box</div>
+              <div class="box dynamic-box">Dynamic Box</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Create Dynamic Stylesheet</h3>
+            <div class="controls">
+              <button id="create-dynamic-css">Create Stylesheet</button>
+              <button id="add-dynamic-rule">Add Rule to Dynamic</button>
+            </div>
+            <div class="demo-grid">
+              <div class="box dyn-1">Dyn 1</div>
+              <div class="box dyn-2">Dyn 2</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Computed Styles Viewer</h3>
+            <div class="controls">
+              <label>
+                Element ID
+                <input id="computed-id" type="text" value="main-title" />
+              </label>
+              <button id="view-computed">View</button>
+            </div>
+            <pre id="cssom-computed-output" class="output"></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">Crafted for Lesson 10 & 11 demos</footer>
+
+    <script src="dom.js"></script>
+    <script src="cssom.js"></script>
+  </body>
+</html>

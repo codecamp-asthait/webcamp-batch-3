@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson Code: IndexedDB (Beginner)</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+      .mono { font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .kv-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>IndexedDB Playground (Beginner)</h1>
+      <nav class="top-nav">
+        <button id="open-tab">Open Clone Tab</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="panel visible">
+        <h2>Open Database</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Initialize</h3>
+            <div class="controls">
+              <input id="db-name" type="text" value="demo-db" />
+              <input id="store-name" type="text" value="items" />
+              <button id="db-open">Open DB</button>
+            </div>
+            <pre id="db-output" class="output mono"></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel visible">
+        <h2>CRUD (Create, Read, Delete)</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Add Item</h3>
+            <div class="kv-row">
+              <input id="item-text" type="text" placeholder="Enter text" />
+              <button id="item-add">Add</button>
+            </div>
+            <pre id="add-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>List Items</h3>
+            <div class="controls">
+              <button id="items-list">List All</button>
+            </div>
+            <pre id="list-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Get / Delete Item by ID</h3>
+            <div class="kv-row">
+              <input id="item-id" type="number" placeholder="id" />
+              <div class="controls">
+                <button id="item-get">Get</button>
+                <button id="item-delete">Delete</button>
+              </div>
+            </div>
+            <pre id="getdel-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Clear Store</h3>
+            <div class="controls">
+              <button id="store-clear">Clear All</button>
+            </div>
+            <pre id="clear-output" class="output mono"></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel visible">
+        <h2>Version Upgrade (Add Index)</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Add Index on text</h3>
+            <div class="controls">
+              <button id="db-upgrade">Upgrade DB (v2)</button>
+              <button id="find-by-text">Find by text</button>
+              <input id="find-text" type="text" placeholder="search text" />
+            </div>
+            <pre id="upgrade-output" class="output mono"></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">IndexedDB basics: open, add, list, get, delete, clear, upgrade</footer>
+
+    <script src="idb.js"></script>
+  </body>
+</html>

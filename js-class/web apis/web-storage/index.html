@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson Code: Web Storage (Local & Session)</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .kv-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: center; }
+      .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Web Storage Playground</h1>
+      <nav class="top-nav">
+        <button id="show-local">LocalStorage</button>
+        <button id="show-session">SessionStorage</button>
+        <button id="open-tab">Open Clone Tab</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- LOCAL STORAGE PANEL -->
+      <section id="local-panel" class="panel visible">
+        <h2>LocalStorage</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Key-Value Manager</h3>
+            <div class="kv-row">
+              <input id="local-key" type="text" placeholder="key" />
+              <input id="local-value" type="text" placeholder="value (text or JSON)" />
+              <label><input id="local-json" type="checkbox" /> JSON</label>
+            </div>
+            <div class="controls">
+              <button id="local-set">Set</button>
+              <button id="local-get">Get</button>
+              <button id="local-remove">Remove</button>
+              <button id="local-clear">Clear All</button>
+            </div>
+            <pre id="local-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>List / Export / Import</h3>
+            <div class="controls">
+              <button id="local-list">List Keys</button>
+              <button id="local-export">Export JSON</button>
+              <button id="local-import">Import JSON</button>
+              <input id="local-import-file" type="file" accept="application/json" />
+            </div>
+            <pre id="local-list-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Preferences Demo (Theme)</h3>
+            <div class="controls">
+              <button id="local-theme-dark">Set Dark</button>
+              <button id="local-theme-light">Set Light</button>
+              <button id="local-theme-reset">Reset Pref</button>
+            </div>
+            <pre id="local-theme-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Storage Events</h3>
+            <p>Open another tab with this same page and change values to see events.</p>
+            <pre id="local-events-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Quota Tester</h3>
+            <div class="controls">
+              <button id="local-quota-small">Write 100KB</button>
+              <button id="local-quota-large">Write 5MB</button>
+              <button id="local-quota-clear">Clear Test Data</button>
+            </div>
+            <pre id="local-quota-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Cheat Sheet & Differences</h3>
+            <div class="controls">
+              <button id="local-demo-basic">Demo Set/Get/Remove (string)</button>
+              <button id="local-demo-json">Demo Set/Get (JSON)</button>
+              <button id="show-differences">Show Local vs Session</button>
+            </div>
+            <pre id="local-cheat-output" class="output mono"></pre>
+            <pre id="differences-output" class="output mono"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- SESSION STORAGE PANEL -->
+      <section id="session-panel" class="panel">
+        <h2>SessionStorage</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Key-Value Manager</h3>
+            <div class="kv-row">
+              <input id="sess-key" type="text" placeholder="key" />
+              <input id="sess-value" type="text" placeholder="value (text or JSON)" />
+              <label><input id="sess-json" type="checkbox" /> JSON</label>
+            </div>
+            <div class="controls">
+              <button id="sess-set">Set</button>
+              <button id="sess-get">Get</button>
+              <button id="sess-remove">Remove</button>
+              <button id="sess-clear">Clear All</button>
+            </div>
+            <pre id="sess-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>List / Export / Import</h3>
+            <div class="controls">
+              <button id="sess-list">List Keys</button>
+              <button id="sess-export">Export JSON</button>
+              <button id="sess-import">Import JSON</button>
+              <input id="sess-import-file" type="file" accept="application/json" />
+            </div>
+            <pre id="sess-list-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Storage Events</h3>
+            <p>SessionStorage events also fire across tabs of the same origin.</p>
+            <pre id="sess-events-output" class="output mono"></pre>
+          </div>
+
+          <div class="card">
+            <h3>Cheat Sheet</h3>
+            <div class="controls">
+              <button id="sess-demo-basic">Demo Set/Get/Remove (string)</button>
+              <button id="sess-demo-json">Demo Set/Get (JSON)</button>
+            </div>
+            <pre id="sess-cheat-output" class="output mono"></pre>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">Web Storage API demos (Local & Session)</footer>
+
+    <script src="storage.js"></script>
+  </body>
+</html>
