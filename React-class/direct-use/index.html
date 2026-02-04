@@ -1,0 +1,34 @@
+<html>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- <script type="text/javascript">
+      const app = document.getElementById('app');
+      const header = document.createElement('h1');
+      const text = 'Develop. Preview. Ship.';
+      const headerContent = document.createTextNode(text);
+      header.appendChild(headerContent);
+      app.appendChild(header);
+    </script> -->
+     <!-- <script type="text/javascript">
+      const rootElement = document.getElementById('root');
+      const root = ReactDOM.createRoot(rootElement);
+
+        const Header = React.createElement('h1', null, 'Develop. Preview. Ship.');
+
+      root.render(Header);
+    </script> -->
+    <script type="text/jsx">
+      const rootElement = document.getElementById('root');
+      const root = ReactDOM.createRoot(rootElement);
+
+      function Header() {
+        return <h1>Develop. Preview. Ship.</h1>;
+      }
+
+      root.render(<Header />);
+    </script>
+  </body>
+</html>
