@@ -35,9 +35,5 @@ This track covers core JavaScript language features followed by practical browse
 3. Open DevTools Console to observe logs and results.
 4. For the language basics, open each `.js` file and run snippets in the browser console or with Node.
 
-### Suggested Learning Order
-1. Start with variables → numbers/operators → functions → arrays.
-2. Move to DOM → events → CSSOM → storage → IndexedDB.
-3. Build a small app that persists data using Web Storage or IndexedDB.
 
 webcamp-batch-3
